@@ -3,11 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Page</title>
+    <title>Home | Ganiyat Bose Bakare</title>
+    <meta name="author" content="Ganiyat Bose Bakare">  
+    <meta name="description" content="WDD 231 course home page">  
+    <link rel="preconnect" href="https://fonts.googleapis.com">  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Tinos:wght@400;700&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/course.css">  
+    <script src="scripts/course.js" defer></script>  
 </head>
 <body>
     <header>
-        <h1>WDD 231 - Ganiyat</h1>
+        <img src="images/profile.webp" alt="profile image">
+        <h1>Ganiyat B. Bakare</h1>
     </header>
+    <nav>  
+        <div id="menu"></div>  
+        <ul class="nav"> 
+            <li><a href="index.html" class="active">Home</a></li>  
+            <li><a href="chamber/" target="_blank">Chamber</a></li>  
+            <li><a href="https://github.com/ganiyat-bakare" target="_blank">GitHub Profile</a></li>  
+            <li><a href="https://www.linkedin.com/in/ganiyat-bakare-864501152?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BhnnEQa40Qy2elI7HkUQ7JA%3D%3D" target="_blank">LinkedIn</a></li>
+        </ul>  
+    </nav>  
+    <main>
+        <section id="course-work">
+            <h2>Course Work</h2>
+            <ul id="course-list"></ul>
+            <div>
+                <ul class="link">
+                    <li><a href="https://byui-cse.github.io/wdd231-ww-course/">WDD 231</a></li>
+                    <li><a href="https://byui-cse.github.io/wdd131-ww-course/">WDD 131</a></li>
+                    <li><a href="https://byui-cse.github.io/cse210-ww-course/index.html">CSE 210</a></li>
+                </ul>
+            </div>
+        </section>
+        <section id="location">
+            <h2>Abuja, Nigeria</h2>
+            <div>
+                <img src="images/zuma-rock.webp" alt="An image of Zuma rock with an ostrich at the front">
+                <p>Olumo Rock</p>
+            </div>
+        </section>
+        <section id="certificate">
+            <h2>Web and Computer Programming Certificate</h2>
+            <div id="credit-display" class="credit-background">
+                Total Credits: <span id="total-credits">0</span>  
+            </div>
+            <div id="filter-buttons">
+                <button onclick="filterCourses('all')">All Courses</button>
+                <button onclick="filterCourses('CSE')">CSE Courses</button>
+                <button onclick="filterCourses('WDD')">WDD Courses</button>
+            </div>
+            <div id="course-cards"></div>
+        </section>
+    </main>
+    <footer>
+        <p>
+            © <span id="currentyear"></span> 🌹 Ganiyat Bose Bakare 🌹 Nigeria <img src="images/nigeria-flag.webp" alt="Nigeria flag">
+        </p>
+        <p>
+            Last Modified: <span id="lastModified"></span>
+        </p>
+    </footer>
 </body>
 </html>
