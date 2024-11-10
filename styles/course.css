@@ -274,7 +274,6 @@ footer {
         cursor: pointer;
         text-decoration: none;
         padding: 0.3rem;
-        background-color: none;
         border: none;
         color: var(--secondary-color);
         position: absolute;
