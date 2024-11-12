@@ -9,13 +9,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">  
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Tinos:wght@400;700&display=swap" rel="stylesheet">  
-    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="styles/course.css">  
     <script src="scripts/course.js" defer></script>  
 </head>
 <body>
     <header>
-        <img src="images/profile.webp" alt="profile image">
+        <img src="images/profile.webp" alt="profile image" width="100">
         <h1>Ganiyat B. Bakare</h1>
     </header>
     <nav>  
@@ -28,7 +28,7 @@
         </ul>  
     </nav>  
     <main>
-        <section id="course-work">
+        <section id="course-work" class="grid">
             <h2>Course Work</h2>
             <ul id="course-list"></ul>
             <div>
@@ -39,11 +39,13 @@
                 </ul>
             </div>
         </section>
-        <section id="location">
+        <section id="location" class="grid">
             <h2>Abuja, Nigeria</h2>
             <div>
-                <img src="images/zuma-rock.webp" alt="An image of Zuma rock with an ostrich at the front">
-                <p>Olumo Rock</p>
+                <figure>
+                    <img src="images/zuma-rock.webp" alt="An image of Zuma rock with an ostrich at the front" width="300" loading="lazy">
+                    <figcaption>Olumo Rock</figcaption>
+                </figure>
             </div>
         </section>
         <section id="certificate">
@@ -52,16 +54,26 @@
                 Total Credits: <span id="total-credits">0</span>  
             </div>
             <div id="filter-buttons">
-                <button onclick="filterCourses('all')">All Courses</button>
-                <button onclick="filterCourses('CSE')">CSE Courses</button>
-                <button onclick="filterCourses('WDD')">WDD Courses</button>
+                <button onclick="filterCourses('all')">All</button>
+                <button onclick="filterCourses('CSE')">CSE</button>
+                <button onclick="filterCourses('WDD')">WDD</button>
             </div>
             <div id="course-cards"></div>
+
+            <dialog id="courseDialog">
+                <form method="dialog">
+                    <h3>Course Details</h3>
+                    <p id="courseDetails"></p>
+                    <menu>
+                        <button id="closeButton"> Close</button>
+                    </menu>
+                </form>
+            </dialog>
         </section>
     </main>
     <footer>
         <p>
-            © <span id="currentyear"></span> 🌹 Ganiyat Bose Bakare 🌹 Nigeria <img src="images/nigeria-flag.webp" alt="Nigeria flag">
+            © <span id="currentyear"></span> 🌹 Ganiyat Bose Bakare 🌹 Nigeria <img src="images/nigeria-flag.webp" alt="Nigeria flag" loading="lazy">
         </p>
         <p>
             Last Modified: <span id="lastModified"></span>

@@ -81,7 +81,6 @@ const courses = [
 
 // Set the current year and last modified date  
 const currentYear = new Date().getFullYear();
-
 document.getElementById("currentyear").textContent = ` ${currentYear}`;
 
 let text = document.lastModified;
@@ -134,14 +133,28 @@ function displayCourses(filter) {
 
 // Function to show course details when clicked
 function showCourseDetails(course) {
-    alert(`Course: ${course.subject} ${course.number}
-        Title: ${course.title}
-        Credits: ${course.credits}
-        Description: ${course.description}
-        Technology: ${course.technology.join(',')}
-        Completed: ${course.completed ? 'Yes' : 'No'}
-    `);
+    const courseDialog = document.getElementById('courseDetails');
+    const courseDetails = document.getElementById('courseDetails');
+
+    // Set the dialog content
+    courseDetails.innerHTML = `
+    <strong>Course:</strong> ${course.subject} ${course.number}<b>
+    <strong>Title:</strong> ${course.title}<b>
+    <strong>Credits:</strong> ${course.credits}<b>
+    <strong>Description: </strong> ${course.description}<b>
+    <strong>Technology:</strong> ${course.technology.join(',')}<b>
+    <strong>Completed:</strong> ${course.completed ? 'Yes' : 'No'}         
+    `;
+
+    // Show the dialog
+    courseDialog.showModal();
 }
+
+// Event listener for closing the dialog
+document.getElementById('closeButton').addEventListener('click', function() {
+    const courseDialog = document.getElementById('courseDialog');
+    courseDialog.closest();
+});
 
 // Function to filter courses based on the button clicked
 function filterCourses(subject) {
