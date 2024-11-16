@@ -1,0 +1,86 @@
+[  
+    {  
+        "name": "Tech Innovations Inc.",  
+        "address": "123 Tech Drive, Silicon Valley, CA 94043",  
+        "phone": "(123) 456-7890",  
+        "website": "www.techinnovations.com",  
+        "image": "tech_innovations_logo.png",  
+        "membership_level": 3,  
+        "year_founded": 2010,  
+        "industry": "Technology",  
+        "awards": ["Best Tech Startup 2015", "Innovative Tech Award 2019"],  
+        "specialties": ["AI Solutions", "Cloud Computing"]  
+    },  
+    {  
+        "name": "Green Earth Solutions",  
+        "address": "456 Eco Lane, Green City, TX 75001",  
+        "phone": "(234) 567-8901",  
+        "website": "www.greenearthsolutions.com",  
+        "image": "green_earth_logo.png",  
+        "membership_level": 2,  
+        "year_founded": 2015,  
+        "industry": "Environmental Services",  
+        "awards": ["Green Enterprise Award 2020"],  
+        "specialties": ["Sustainable Products", "Eco-Friendly Services"]  
+    },  
+    {  
+        "name": "Health First Medical",  
+        "address": "789 Health St, Wellness Town, NY 10001",  
+        "phone": "(345) 678-9012",  
+        "website": "www.healthfirstmedical.com",  
+        "image": "health_first_logo.png",  
+        "membership_level": 1,  
+        "year_founded": 2005,  
+        "industry": "Healthcare",  
+        "awards": ["Best Healthcare Provider 2018"],  
+        "specialties": ["Preventive Care", "Chronic Disease Management"]  
+    },  
+    {  
+        "name": "Global Finance Group",  
+        "address": "654 Finance Blvd, Capital City, FL 33101",  
+        "phone": "(567) 890-1234",  
+        "website": "www.globalfinance.com",  
+        "image": "global_finance_logo.png",  
+        "membership_level": 3,  
+        "year_founded": 2000,  
+        "industry": "Finance",  
+        "awards": ["Best Financial Consultant 2019"],  
+        "specialties": ["Investment Strategies", "Risk Management"]  
+    },  
+    {  
+        "name": "Adventure Travels LLC",  
+        "address": "987 Adventure Rd, Travel Town, AZ 85001",  
+        "phone": "(678) 901-2345",  
+        "website": "www.adventuretravels.com",  
+        "image": "adventure_travels_logo.png",  
+        "membership_level": 1,  
+        "year_founded": 2016,  
+        "industry": "Travel & Hospitality",  
+        "awards": ["Top Adventure Travel Company 2022"],  
+        "specialties": ["Customized Tours", "Adventure Packages"]  
+    },  
+    {  
+        "name": "Creative Designs Agency",  
+        "address": "321 Art Ave, Creative City, IL 60606",  
+        "phone": "(456) 789-0123",  
+        "website": "www.creativedesigns.com",  
+        "image": "creative_designs_logo.png",  
+        "membership_level": 2,  
+        "year_founded": 2012,  
+        "industry": "Marketing & Advertising",  
+        "awards": ["Top Creative Agency 2021"],  
+        "specialties": ["Branding", "Digital Marketing"]  
+    },  
+    {  
+        "name": "Culinary Delights Restaurant",  
+        "address": "135 Gourmet St, Foodie City, WA 98001",  
+        "phone": "(789) 012-3456",  
+        "website": "www.culinarydelights.com",  
+        "image": "culinary_delights_logo.png",  
+        "membership_level": 2,  
+        "year_founded": 2018,  
+        "industry": "Food & Beverage",  
+        "awards": ["Best New Restaurant 2019"],  
+        "specialties": ["Farm-to-Table Dining", "Seasonal Cuisine"]  
+    }  
+]
