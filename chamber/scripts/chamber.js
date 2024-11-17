@@ -29,12 +29,14 @@ const displayMembers = (members) => {
         let number = document.createElement('p');
         let website = document.createElement('a');
         let image = document.createElement('img');
+        let membership_level = document.createElement('level')
 
         name.textContent = member.name;
         address.textContent = member.address;  
         number.textContent = member.phone;  
-        website.textContent = "Visit Website";  
+        website.textContent = member.website;  
         website.href = member.website;  
+        membership_level.textContent = `Membership Level: ${member.membership_level}`; 
         website.target = "_blank";  
 
         image.setAttribute('src',`images/${member.image}`);
@@ -45,6 +47,7 @@ const displayMembers = (members) => {
 
         card.appendChild(name);
         card.appendChild(image);
+        card.appendChild(membership_level);
         card.appendChild(address);
         card.appendChild(number);
         card.appendChild(website);
@@ -65,7 +68,7 @@ const displayMembers = (members) => {
 // Toggle view functionality 
 const gridbutton = document.querySelector("#grid");
 const listbutton = document.querySelector("#list");
-const display = document.querySelector("#cards");
+const display = document.querySelector("#members");
 
 gridbutton.addEventListener("click", () => {
 	// example using arrow function
@@ -79,6 +82,14 @@ function showList() {
 	display.classList.add("list");
 	display.classList.remove("grid");
 }
+
+
+// Set the current year and last modified date  
+const currentYear = new Date().getFullYear();
+document.getElementById("currentyear").textContent = ` ${currentYear}`;
+
+let text = document.lastModified;
+document.getElementById("lastModified").innerHTML = text
 
 
 
