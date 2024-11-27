@@ -32,16 +32,16 @@
 
 body {
     background-color: var(--background);
-    margin: 0 auto;  
-    padding: 20px; 
     height: auto;
+    max-width: 1100px;
+    margin: auto;
 }
 
 header {
     font-family: var(--heading-font);
     background-color: var(--header);
     color: var(--white);
-    padding: 1.5rem;
+    padding: 2rem;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -155,7 +155,15 @@ main {
     flex: 1;
     padding-bottom: 15px;
 
-}  
+} 
+
+.card {
+    background-color: var(--highlight2);
+}
+
+.member-card {
+    background-color: aliceblue;
+}
 
 .card:hover {  
     transform: scale(1.02);   
@@ -347,9 +355,20 @@ footer {
 
 
 @media (max-width: 650px) {
+    header {
+        gap: 5px;
+    }
+
+    .head {
+        justify-content: space-between;
+    }
         
     h1 {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
+    }
+    
+    .head p {
+        font-size: smaller;
     }
 
     ul.nav {
