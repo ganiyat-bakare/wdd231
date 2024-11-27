@@ -1,54 +1,107 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Abuja Chamber of commerce directory page">
-    <meta name="author" content="Ganiyat Bose Bakare">
-    <title>Abuja Chamber of Commerce | Directory - Ganiyat Bose Bakare</title>
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <meta name="description" content="Welcome to Abuja Chamber of Commerce">  
+    <meta name="author" content="Ganiyat Bose Bakare">  
+    <title>Abuja Chamber of Commerce - Home</title>  
 
-    <link rel="icon" href="images/favicon.ico">
-
-    <meta property="og:title" content="Abuja Chamber of Commerce">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="images/commerce.webp">
-    <meta property="og:url" content="https://ganiyat-bakare.github.io/wdd231/chamber/directory.html">
-
+    <link rel="icon" href="images/favicon.ico">  
     <link rel="preconnect" href="https://fonts.googleapis.com">  
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Tinos:wght@400;700&display=swap" rel="stylesheet">  
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">  
     <link rel="stylesheet" href="styles/chamber.css">
+    <script src="scripts/chamber.js" defer></script> 
+    <script src="scripts/getdates.js" defer></script> 
 
-    <script src="scripts/chamber.js" defer></script>
-</head>
-<body>
-    <header>
-        <img src="images/logo.png" alt="commerce icon" width="40" height="40">
-        <h1>Abuja Chamber of Commerce</h1>
-        <button id="ham"></button>
-    </header>
+</head>  
+<body>  
+    <header>  
+        <img src="images/logo.png" alt="commerce icon" width="60" height="60">
+        <div class="head">
+            <h1>Abuja</h1>
+            <p>Chamber of Commerce</p>  
+        </div>  
+        <button id="ham" aria-label="Menu"></button>  
+    </header>  
 
-    <nav id="animate">
-        <ul class="navi">
-            <li class="current-menu-item"><a href="index.html">Home</a></li>
-            <li><a href="discover.html">Discover</a></li>
-            <li><a href="directory.html">Business Directory</a></li>
-            <li><a href="join.thml">Join</a></li>
-        </ul>
-    </nav>
+    <nav id="animate">  
+        <ul class="nav">  
+            <li class="current-menu-item"><a href="index.html">Home</a></li>  
+            <li><a href="discover.html">Discover</a></li>  
+            <li><a href="directory.html">Business Directory</a></li>  
+            <li><a href="join.html">Join</a></li>  
+        </ul>  
+    </nav>  
 
-    <main></main>
-    <footer>
-        <p>Contact us: info@chamberabuja.ng | (+234) 8137367430</p>
-        <p>
-            © <span id="currentyear"></span> 🌹 Ganiyat Bose Bakare 🌹 WDD 231
-        </p>
-        <p>
-            Last Modified: <span id="lastModified"></span>
-        </p>
-    </footer>
-</body>
+    <main class="main">   
+        <section class="hero"> 
+            <picture class="hero">
+                <source srcset="images/hero-large.webp" media="(min-width: 1000px)">
+                <source srcset="images/hero-medium.webp" media="(min-width: 500px)">
+                <img src="images/hero-small.webp" alt="image showing commercial buildings" width="1500" height="750">
+            </picture>   
+            <!-- <img src="images/commerce.jpeg" alt="hero-image">   -->
+            <a href="join.html" class="action-button">Join Chamber!</a>
+        </section>  
+
+        <h2>Home</h2>  
+
+        <!-- Cards Section -->
+        <div class="cards">
+            <!-- Events Section -->  
+            <section class="current-events card">  
+                <h2>Current Events</h2> 
+                <ul>  
+                    <li>Annual Business Gala - December 15, 2024</li>  
+                    <li>Networking Breakfast - January 10, 2025</li>  
+                    <li>Workshop on Digital Marketing - February 20, 2025</li>  
+                </ul>  
+            </section>  
+
+            <!-- Current Weather Section -->  
+            <section class="current-weather card">
+                <div id="weather-info">
+                </div>
+            </section>  
+
+            <!-- 3-Days Weather Forecast -->
+            <section class="three-day-forecast card">  
+                <h2>3-Day Weather Forecast</h2>  
+                <div id="forecast-info">  
+                    <p>Loading forecast data...</p>  
+                </div>  
+            </section>
+        </div>
+        
+        <!-- Spotlight Section -->  
+        <section>
+            <h2>Spotlight Members</h2>  
+            <div id="members-container" class="spotlight-members"></div>  
+        </section>  
+    </main>   
+
+    <footer>  
+        <div class="chamber-contact-info">  
+            <p><b>Abuja Chamber of Commerce</b></p>  
+            <p>100 Business St.</p>  
+            <p>Abuja, NG</p>  
+            <p>info@abujachamber.org</p>  
+            <p>(+234) 8137367430</p>  
+        </div>  
+        <div class="social-media-links">  
+            <a href="#"><img src="images/instagram.webp" alt="Instagram" width="40" height="40"></a>  
+            <a href="#"><img src="images/facebook.webp" alt="Facebook" width="40" height="40"></a>  
+            <a href="#"><img src="images/linkedin.webp" alt="LinkedIn" width="40" height="40"></a>  
+        </div>  
+        <div class="project-info">  
+            <p>WDD231 Class Project</p>  
+            <p>Instructor: Jason Blazzard</p>  
+            <p>&copy; <span id="currentyear"></span> Abuja Chamber of Commerce</p>  
+            <p>Last Modified: <span id="lastModified"></span></p>  
+        </div>  
+    </footer>  
+</body>  
 </html>
