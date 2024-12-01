@@ -118,48 +118,50 @@ function displayCourses(filter) {
         const courseDiv = document.createElement('div');
         courseDiv.className = course.completed ? 'completed' : 'not-completed';
         courseDiv.innerHTML = `<h3>${course.subject} ${course.number}</h3>
-        <p><strong>Credits:</strong> ${course.credits}</p>
-        <p>${course.completed ? 'Completed': 'Not Completed'}</p>`;
+        <p>Credits: ${course.credits}</p>`;
+        // <p>${course.completed ? '': 'Not Completed'}</p>`;
 
         // Add click event to show course details
-        courseDiv.onclick = () => showCourseDetails(course);
+        courseDiv.onclick = () => displayCourseDetails(course);
 
         courseList.appendChild(courseDiv);
-        // credits += course.credits;
     });
 
     totalCredits.textContent = credits;
 }
-
-// Function to show course details when clicked
-function showCourseDetails(course) {
-    const courseDialog = document.getElementById('courseDetails');
-    const courseDetails = document.getElementById('courseDetails');
-
-    // Set the dialog content
-    courseDetails.innerHTML = `
-    <strong>Course:</strong> ${course.subject} ${course.number}<b>
-    <strong>Title:</strong> ${course.title}<b>
-    <strong>Credits:</strong> ${course.credits}<b>
-    <strong>Description: </strong> ${course.description}<b>
-    <strong>Technology:</strong> ${course.technology.join(',')}<b>
-    <strong>Completed:</strong> ${course.completed ? 'Yes' : 'No'}         
-    `;
-
-    // Show the dialog
-    courseDialog.showModal();
-}
-
-// Event listener for closing the dialog
-document.getElementById('closeButton').addEventListener('click', function() {
-    const courseDialog = document.getElementById('courseDialog');
-    courseDialog.closest();
-});
 
 // Function to filter courses based on the button clicked
 function filterCourses(subject) {
     displayCourses(subject);
 }
 
+function displayCourseDetails(course) {
+    const courseDetails = document.getElementById('course-details');
+
+    courseDetails.innerHTML = '';
+    courseDetails.innerHTML = `
+    <button id="closeModal"> ❌</button>
+    <h2>${course.subject} ${course.number}</h2>
+    <h3>${course.title}</h3>
+    <p><strong>Credits</strong>: ${course.credits}</p>
+    <p><strong>Certificate</strong>: ${course.certificate}</p>
+    <p>${course.description}</p>
+    <p><strong>Technologies</strong>: ${course.technology}</p>
+    `;
+    courseDetails.showModal();  
+
+    // Close modal when close button is clicked  
+    const closeModal = document.getElementById('closeModal');  
+    closeModal.addEventListener('click', () => {  
+        courseDetails.close();  
+    });  
+
+    // Close modal when clicking outside of it  
+    courseDetails.addEventListener('click', (event) => {  
+        if (event.target === courseDetails) {  
+            courseDetails.close();  
+        }  
+    });  
+}  
 //Initial display of all courses
 displayCourses('all');

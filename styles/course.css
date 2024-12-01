@@ -125,6 +125,28 @@ button:hover {
     color: var(--button-hover);
 }
 
+dialog {
+    border: 1px solid rgb(0 0 0 / 0.1);
+    border-radius: .25rem;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 3rem #777;
+    width: 90%;
+    max-width: 600px;
+}
+
+::backdrop {
+    background-color: rgb(0 0 0 / 0.5);
+}
+
+dialog button {
+    position: absolute;
+    top: 23px;
+    right: 23px;
+    padding: .5rem 1rem;
+    border: 1px solid rgb(0 0 0 / 0.1);
+}
+
 footer {
     text-align: center;
     background-color: var(--primary-color);
@@ -143,14 +165,6 @@ footer {
     content: "📍";
 }
 
-/* #course-work {
-    grid-column: 1;
-}
-
-#location {
-    grid-column: 2;
-} */
-
 .grid {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     border: 2px solid var(--primary-color);
@@ -159,6 +173,52 @@ footer {
     padding-top: 3px;
     margin : 10px;
     border-radius: 0.5rem;
+}
+
+/* Keyframes for the fade-in animation */  
+@keyframes spin {  
+    0% {  
+        transform: rotate(0deg);  
+        background-color: var(--accent2-color); 
+    }  
+    25% {  
+        background-color: var(--accent3-color);  
+    }  
+    50% {  
+        transform: rotate(180deg);
+        background-color: var(--primary-color); 
+    }  
+    75% {  
+        background-color: var(--nav-link-color); 
+    }  
+    100% {  
+        transform: rotate(360deg);  
+        background-color: var(--accent2-color); 
+    }  
+}    
+
+/* Style for the moving color box */  
+.moving-box {  
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    height: 100px;
+    background-color: var(--accent2-color);  
+    position: relative; /* Position relative for animation */  
+    animation: moveBox 3s linear infinite, spin 3s linear infinite; /* Animation details */  
+}  
+
+/* Keyframes for the moving box animation */  
+@keyframes moveBox {  
+    0% {  
+        transform: translateX(0);
+    }  
+    50% {  
+        transform: translateX(100%);
+    }  
+    100% {  
+        transform: translateX(0); 
+    }  
 }
 
 .link {
@@ -205,7 +265,7 @@ footer {
 
 #course-cards div {
     margin: 5px;
-    padding: 2px 5px;
+    padding: 5px 5px;
     border-radius: 5px;
     text-align: center;
     align-items: center;
