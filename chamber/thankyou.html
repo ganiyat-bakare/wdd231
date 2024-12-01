@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Abuja Chamber of commerce directory page">
     <meta name="author" content="Ganiyat Bose Bakare">
-    <title>Abuja Chamber of Commerce - Directory</title>
+    <title>Abuja Chamber of Commerce | Directory - Ganiyat Bose Bakare</title>
 
     <link rel="icon" href="images/favicon.ico">
 
     <meta property="og:title" content="Abuja Chamber of Commerce">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://raw.githubusercontent.com/ganiyat-bakare/wdd231/refs/heads/main/chamber/images/commerce.webp">
-    <meta property="og:url" content="https://ganiyat-bakare.github.io/wdd231/chamber/directory.html">
+    <meta property="og:image" content="images/commerce.webp">
+    <meta property="og:url" content="https://ganiyat-bakare.github.io/wdd231/chamber/thankyou.html">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">  
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
@@ -39,25 +39,29 @@
         <ul class="nav">
             <li><a href="index.html">Home</a></li>
             <li><a href="discover.html">Discover</a></li>
-            <li class="current-menu-item"><a href="directory.html">Business Directory</a></li>
-            <li><a href="join.html">Join</a></li>
+            <li><a href="directory.html">Business Directory</a></li>
+            <li class="current-menu-item"><a href="join.html">Join</a></li>
         </ul>
     </nav>
 
-    <main class=".directory">
-        <h2>Business Directory</h2>
+    <main class="thank-you-container">  
+        <h1>Thank You for Joining!</h1>  
+        <p>Your submission has been received. Below is your submission details.</p>  
 
-        <div class="view">
-            <button id="grid">
-                <img class="button-symbol" src="images/grid.webp" alt="grid view" width="50" height="50">
-            </button>
-
-            <button id="list">
-                <img class="button-symbol" src="images/list.webp" alt="list view" width="50" height="50">
-            </button>
-        </div> 
-        <div id="members" class="grid"></div> 
-    </main>
+        <h3>Submission Details</h3>
+        <ul>  
+            <li><strong>First Name:</strong> <span id="displayFirstName"></span></li>  
+            <li><strong>Last Name:</strong> <span id="displayLastName"></span></li>  
+            <li><strong>Email:</strong> <span id="displayEmail"></span></li>  
+            <li><strong>Mobile Number:</strong> <span id="displayMobile"></span></li>  
+            <li><strong>Business Name:</strong> <span id="displayBusinessName"></span></li>  
+            <li><strong>Submission Date:</strong> <span id="displayTimestamp"></span></li>  
+        </ul> 
+        <p>We appreciate your interest in joining the Abuja Chamber of Commerce.</p> 
+        <p>We will review your application and get back to you shortly.</p>  
+        <p>We look forward to connecting with you!</p>
+        <p><a href="join.html">Return to Join Page</a></p>  
+    </main>   
 
     <footer>  
         <div class="chamber-contact-info">  
@@ -68,9 +72,9 @@
             <p>(+234) 8137367430</p>  
         </div>  
         <div class="social-media-links">  
-            <a href="#"><img src="images/instagram.webp" alt="Instagram" width="40" height="40"></a>  
-            <a href="#"><img src="images/facebook.webp" alt="Facebook" width="40" height="40"></a>  
-            <a href="#"><img src="images/linkedin.webp" alt="LinkedIn" width="40" height="40"></a>  
+            <a href="#"><img src="images/instagram.webp" alt="Instagram" width="40" height="40"/></a>  
+            <a href="#"><img src="images/facebook.webp" alt="Facebook" width="40" height="40"/></a>  
+            <a href="#"><img src="images/linkedin.webp" alt="LinkedIn" width="40" height="40"/></a>  
         </div>  
         <div class="project-info">  
             <p>WDD231 Class Project</p>  
@@ -78,6 +82,7 @@
             <p>&copy; <span id="currentyear"></span> Abuja Chamber of Commerce</p>  
             <p>Last Modified: <span id="lastModified"></span></p>  
         </div>  
-    </footer> 
-</body>
+    </footer>   
+</body>  
 </html>
+        

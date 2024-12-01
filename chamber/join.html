@@ -12,7 +12,7 @@
     <meta property="og:title" content="Abuja Chamber of Commerce">
     <meta property="og:type" content="website">
     <meta property="og:image" content="images/commerce.webp">
-    <meta property="og:url" content="https://ganiyat-bakare.github.io/wdd231/chamber/directory.html">
+    <meta property="og:url" content="https://ganiyat-bakare.github.io/wdd231/chamber/join.html">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">  
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
@@ -26,11 +26,14 @@
     <script src="scripts/getdates.js" defer></script> 
 </head>
 <body>
-    <header>
-        <img src="images/logo.png" alt="commerce icon" width="40" height="40">
-        <h1>Abuja Chamber of Commerce</h1>
-        <button id="ham"></button>
-    </header>
+    <header>  
+        <img src="images/logo.png" alt="commerce icon" width="60" height="60">
+        <div class="head">
+            <h1>Abuja</h1>
+            <p>Chamber of Commerce</p>  
+        </div>  
+        <button id="ham" aria-label="Menu"></button>  
+    </header>  
 
     <nav id="animate">
         <ul class="nav">
@@ -41,7 +44,62 @@
         </ul>
     </nav>
 
-    <main></main>
+    <main class="form-container">
+        <div>
+            <h1>Join the Chamber</h1>
+            <form method="get" action="thankyou.html">
+                <label>First Name <input type="text" name="first" required autocomplete="given-name" title="Your First Name"></label>
+                <label>Last Name <input type="text" name="last" required autocomplete="family-name" title="Your Last Name"></label>
+                <label for="org-title">Organizational Title <input type="text" id="org-title" name="org-title" title="Enter your organizational title" pattern="[A-Za-z\s\-]{7,}" autocomplete="organization-title"></label>
+                <label>Email <input type="email" name="email" required placeholder="john89@gmail.com"  title="Your Email" autocomplete="email"></label>
+                <label>Cell Phone <input type="tel" name="phone" required autocomplete="tel" title="A Phone Number with dashes" placeholder="987-555-1234"></label>
+                <label for="business-name">Business/Organization Name <input type="text" id="business-name" name="business-name" title="Enter your business name" required autocomplete="organization"></label>
+
+                <label for="membership-level">  
+                    Membership Level  
+                    <select id="membership-level" name="membership-level" title="Select your membership level" required>  
+                        <option value="" disabled selected>Select a membership ...</option>  
+                        <option value="np">Non Profit Membership Level</option>  
+                        <option value="bronze">Bronze Membership Level</option>  
+                        <option value="silver">Silver Membership Level</option>  
+                        <option value="gold">Gold Membership Level</option>  
+                    </select>  
+                </label>  
+
+                <label for="description">  
+                    Business/Organization Description:  
+                    <textarea id="description" name="description" title="Describe your business or organization"></textarea>  
+                </label>  
+
+                <input type="hidden" id="timestamp" name="timestamp" value="">  
+
+                <input type="submit" value="Join Chamber">
+            </form>
+        </div>
+
+        <div class="membership-cards">  
+            <h1>Membership Levels</h1>  
+            <div class="membership-card" id="np-card">                      
+                <h3>NP Membership</h3>  
+                <a href="#" class="modal-open">Learn More</a>  
+            </div>  
+            <div class="membership-card" id="bronze-card">  
+                <h3>Bronze Membership</h3>  
+                <a href="#" class="modal-open">Learn More</a>  
+            </div>  
+            <div class="membership-card" id="silver-card">  
+                <h3>Silver Membership</h3>  
+                <a href="#" class="modal-open">Learn More</a>  
+            </div>  
+            <div class="membership-card" id="gold-card">  
+                <h3>Gold Membership</h3>  
+                <a href="#" class="modal-open">Learn More</a>  
+            </div>  
+        </div>
+
+        <dialog id="membership-info"></dialog>
+    
+    </main>
     <footer>  
         <div class="chamber-contact-info">  
             <p><b>Abuja Chamber of Commerce</b></p>  
@@ -51,9 +109,9 @@
             <p>(+234) 8137367430</p>  
         </div>  
         <div class="social-media-links">  
-            <a href="#"><img src="images/instagram.webp" alt="Instagram" width="40" height="40"/></a>  
-            <a href="#"><img src="images/facebook.webp" alt="Facebook" width="40" height="40"/></a>  
-            <a href="#"><img src="images/linkedin.webp" alt="LinkedIn" width="40" height="40"/></a>  
+            <a href="#"><img src="images/instagram.webp" alt="Instagram" width="40" height="40"></a>  
+            <a href="#"><img src="images/facebook.webp" alt="Facebook" width="40" height="40"></a>  
+            <a href="#"><img src="images/linkedin.webp" alt="LinkedIn" width="40" height="40"></a>  
         </div>  
         <div class="project-info">  
             <p>WDD231 Class Project</p>  

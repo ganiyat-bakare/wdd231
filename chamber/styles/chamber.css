@@ -42,11 +42,11 @@ header {
     font-family: var(--heading-font);
     background-color: var(--header);
     color: var(--white);
-    padding: 2rem;
+    padding: 2rem 2rem 2rem 6rem;
     display: flex;
     align-items: center;
     gap: 10px;
-    justify-content: center;
+    justify-content: left;
 }
 
 .head {
@@ -62,6 +62,11 @@ header {
 .head p {
     font-size: 1.2rem;
     margin: 0;
+}
+
+.form-container h1 {
+    color: var(--header);
+    text-align: center;
 }
 
 
@@ -126,15 +131,19 @@ main {
 
 .action-button {  
     position: absolute;  
-    bottom: 40px;  
-    left: 85%;  
-    transform: translateX(-50%);  
+    bottom: 80px;  
+    left: 75%;  
     background-color: var(--call);  
     color: var(--black);  
     padding: 15px 30px; 
     text-decoration: none;  
-    border: 2px var(--background);
-}  
+    border: 4px var(--background);
+} 
+
+.action-button:hover {
+    background-color: var(--header);
+    color: var(--white);
+}
 
 .container {  
     max-width: 1200px;  
@@ -148,7 +157,7 @@ main {
 
 /* Card styles */  
 .card, .member-card {  
-    background-color: #fff;  
+    background-color: var(--white);  
     border: 1px solid #e0e0e0;  
     border-radius: 8px;  
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
@@ -212,7 +221,6 @@ main {
 .three-day-forecast p, 
 .spotlight-members p {
     padding: 8px;  
-
 }
 
 .current-weather img {
@@ -339,6 +347,196 @@ main {
     object-fit: cover;
 }
 
+.form-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+form {
+    margin: 1rem 2%;
+}
+
+label {
+    display: block;
+    font-size: 1.2rem;
+    color: var(--navy);
+    padding-top: .2rem;
+}
+
+input[type=text],
+input[type=tel],
+input[type=email],
+select,
+textarea {
+    display: block;
+    margin: .1rem 0 1rem 0 ;
+    padding: .8rem;
+    border: 1px solid #999;
+    border-radius: .4rem;
+    border-left-width: 5px;
+    border-left-color:#555;
+    font-size: 1rem;
+    color: var(--black);
+    width: 400px;
+}
+
+input:required {
+    border-left-color: #d70000;
+}
+
+input:focus {
+    border-left-color: black; 
+    outline:none;
+}
+
+input:required:valid {
+    border-left-color: green;
+}
+
+select {
+    color: var(--font-color);
+}
+
+input[type=submit] {
+    border: none;
+    text-align: center;
+    background-color: var(--header);
+    color: var(--white);
+    border-radius: .4rem;
+    padding: .85rem 1.5rem;
+    width: 80%;
+    margin: 2rem 0;
+    font-size: 1.2rem;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--backg);
+    color: var(--navy);
+}
+
+@keyframes fadeInScale {  
+    0% {  
+        opacity: 0; 
+        transform: scale(0.8);  
+    }  
+    100% {  
+        opacity: 1; 
+        transform: scale(1);
+    }  
+}  
+
+.membership-card {  
+    animation: fadeInScale 0.5s ease forwards;  
+    text-align: center;  
+    margin: 20px;  
+    padding: 1.5rem 0;   
+    width: 80%;  
+    border: none;  
+    border-radius: 1rem;  
+    color: var(--white);  
+    background-color: var(--header);  
+    opacity: 0;  
+}
+
+.membership-card h3 {
+    padding-bottom: 1.5rem;
+}
+
+.membership-card a {
+    background-color: var(--backg);
+    color: var(--black);
+    padding: .3rem .8rem;
+    text-decoration: none;
+    border-radius: .5rem;
+}
+
+.membership-card.color-1 {  
+    background-color: var(--backg);
+    color: var(--navy); 
+}  
+
+.membership-card.color-1 a {
+    background-color: var(--header);
+    color: var(--white);
+}
+
+.membership-card.color-2 {  
+    background-color: var(--header);
+    color: var(--white);
+}
+
+.membership-card.color-2 a {
+    background-color: var(--backg);
+    color: var(--navy);
+}
+
+dialog {
+    border: 1px solid rgb(0 0 0 / 0.1);
+    border-radius: .25rem;
+    padding: 2rem;
+    background-color: var(--white);
+    box-shadow: 0 0 3rem #777;
+    width: 90%;
+    max-width: 600px;
+}
+
+::backdrop {
+    background-color: rgb(0 0 0 / 0.7);
+}
+
+dialog button {
+    position: absolute;
+    top: 23px;
+    right: 23px;
+    padding: .5rem 1rem;
+    border: 1px solid rgb(0 0 0 / 0.1);
+}
+
+.thank-you-container {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.thank-you-container ul {
+    list-style-type: none;
+    /* padding-left: 1.5rem; */
+}
+
+.thank-you-container h3 {
+    padding-top: 1rem;
+}
+
+.thank-you-container li {
+    padding: .6rem;
+    color: var(--navy);
+
+}
+
+.thank-you-container a {
+    text-decoration: none;
+    background-color: var(--header);
+    color: var(--white);
+    padding: 8px;
+    border-radius: .5rem;
+}
+
+.thank-you-container a:hover {
+    background-color: var(--backg);
+    color: var(--navy);
+
+}
+
+
+
 footer {
     background-color: var(--header);
     color: var(--white);
@@ -377,7 +575,6 @@ footer {
     ul.nav {
         grid-template-columns: 1fr;
     }
-
 
     nav {
         grid-template-rows: auto;
@@ -420,17 +617,11 @@ footer {
     .nav li {
         display: none;
 
-        opacity: 0;
-        transform: translateY(-10px);
-        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
     }
 
     /* Show links when menu is open */
     .open li {
-        display: block;
-
-        opacity: 1;
-        transform: translateY(0);
+        display: block;  
     }
 
     .current-events h2, 
@@ -463,6 +654,11 @@ footer {
         text-align: center;
         padding: 1rem;
     }
+
+    .form-container {
+        grid-template-columns: 1fr;
+    }
+
 
     footer {
         flex-direction: column;

@@ -2,7 +2,162 @@ document.addEventListener("DOMContentLoaded", () => {
     fetchMembers(); 
     loadWeatherData();  
     loadThreeDayForecast();
-    loadSpotlightMembers();  
+    loadSpotlightMembers(); 
+    
+    const timestampInput = document.getElementById("timestamp");
+    const currentDateTime = new Date();
+    // Format the timestamp as an ISO string (e.g., "2024-11-16T15:30:45.123Z")
+    timestampInput.value = currentDateTime.toISOString();
+});
+
+
+// Membership information object  
+const membershipInfo = {  
+    np: {  
+        title: 'Non Profit (No Fee Benefits)',  
+        price: 'Free',  
+        benefits: [  
+            'Free entry to all chamber events',  
+            'Monthly newsletters with updates',  
+            'Access to networking events with local businesses'  
+        ]  
+    },  
+    bronze: {  
+        title: 'Bronze (Basic Benefits)',  
+        price: '₦10,000',  
+        benefits: [  
+            'All NP Membership benefits',  
+            '10% discount on events and workshops',  
+            'Profile listing on the chamber’s website'  
+        ]  
+    },  
+    silver: {  
+        title: 'Silver (Enhanced Benefits)',  
+        price: '₦20,000',  
+        benefits: [  
+            'All Bronze membership benefits',  
+            '20% discount on events and workshops',  
+            'Priority access to networking events',  
+            'Monthly feature in newsletters'  
+        ]  
+    },  
+    gold: {  
+        title: 'Gold (Premium Benefits)',  
+        price: '₦35,000',  
+        benefits: [  
+            'All Silver Membership benefits',  
+            '30% discount on events and workshops',  
+            'Dedicated account manager',  
+            'Spotlight feature on the chamber’s website'  
+        ]  
+    }  
+}; 
+
+document.querySelectorAll('.membership-card').forEach(card => {  
+    card.classList.add('show');  
+});
+
+// Display membership information  
+function displayMembershipDetails(membershipLevel) {  
+    const membershipInfoDialog = document.getElementById('membership-info');  
+
+    // Clear previous content  
+    membershipInfoDialog.innerHTML = '';  
+
+    // Get membership details based on the selected level  
+    const membership = membershipInfo[membershipLevel];  
+
+    // Construct the dialog content  
+    membershipInfoDialog.innerHTML = `  
+        <button id="closeModal"> ❌</button>  
+        <h2>Membership: ${membership.title}</h2>  
+        <p><strong>Price:</strong> ${membership.price}</p>  
+        <p><strong>Benefits:</strong></p>  
+        <ul>${membership.benefits.map(benefit => `<li>${benefit}</li>`).join('')}</ul>  
+    `;  
+
+    membershipInfoDialog.showModal();  
+
+    // Close modal when close button is clicked  
+    const closeModal = document.getElementById('closeModal');  
+    closeModal.addEventListener('click', () => {  
+        membershipInfoDialog.close();  
+    });  
+
+    // Close modal when clicking outside of it  
+    membershipInfoDialog.addEventListener('click', (event) => {  
+        if (event.target === membershipInfoDialog) {  
+            membershipInfoDialog.close();  
+        }  
+    });  
+}  
+
+document.addEventListener('DOMContentLoaded', () => {  
+    // Add 'show' class to all membership cards for initial animation  
+    document.querySelectorAll('.membership-card').forEach(card => {  
+        card.classList.add('show');  
+
+        // Add a slight delay for button appearance  
+        const button = card.querySelector('a'); // Find the button inside the card  
+        if (button) {  
+            setTimeout(() => {  
+                button.style.opacity = 1; // Make the button visible  
+            }, 300);  
+        }  
+    });  
+
+    // Array of color classes to rotate through  
+    const colorClasses = ['color-1', 'color-2'];  
+    let currentIndex = 0;  
+
+    // Function to change card colors  
+    function changeCardColors() {  
+        document.querySelectorAll('.membership-card').forEach(card => {  
+            // Remove the current color class  
+            card.classList.remove(colorClasses[currentIndex]);  
+
+            // Update to the next color class  
+            currentIndex = (currentIndex + 1) % colorClasses.length;  
+            card.classList.add(colorClasses[currentIndex]);  
+        });  
+    }  
+
+    // Change colors every 30 seconds (20000 milliseconds)  
+    setInterval(changeCardColors, 20000);  
+
+    // Event listeners for membership cards  
+    document.querySelectorAll('.modal-open').forEach(link => {  
+        link.addEventListener('click', function(event) {  
+            event.preventDefault();  
+            const membershipLevel = this.closest('.membership-card').id.replace('-card', '');  
+            displayMembershipDetails(membershipLevel);  
+        });  
+    }); 
+   
+    
+    // Function to get URL parameters  
+    function getUrlParams() {  
+        const params = new URLSearchParams(window.location.search);  
+        return {  
+            first: params.get('first'),  
+            last: params.get('last'),  
+            email: params.get('email'),  
+            phone: params.get('phone'),  
+            businessName: params.get('business-name'),  
+            timestamp: params.get('timestamp')  
+        };  
+    }  
+
+    // Get the parameters from the URL  
+    const formData = getUrlParams();  
+
+    // Display the data in the corresponding HTML elements  
+    document.getElementById('displayFirstName').textContent = formData.first;  
+    document.getElementById('displayLastName').textContent = formData.last;  
+    document.getElementById('displayEmail').textContent = formData.email;  
+    document.getElementById('displayMobile').textContent = formData.phone;  
+    document.getElementById('displayBusinessName').textContent = formData.businessName;  
+    document.getElementById('displayTimestamp').textContent = new Date(formData.timestamp).toLocaleString();
 });  
 
 // Hamburger functionality
