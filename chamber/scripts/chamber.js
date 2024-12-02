@@ -250,7 +250,8 @@ async function loadWeatherData() {
         let sunset = new Date(data.sys.sunset * 1000).toLocaleTimeString();
  
         const weatherInfo = `<h2>Current Weather in ${data.name}</h2>
-            <img src="https://openweathermap.org/img/w/${data.weather[0].icon}.png">
+            <img src="https://openweathermap.org/img/w/${data.weather[0].icon}.png"
+            alt="Weather icon representing ${capitalizeWords(data.weather[0].description)}">
             <p>${capitalizeWords(data.weather.map(w => w.description).join(', '))}</p>
             <p><strong>${Math.round(data.main.temp)}&deg;F</strong></p>  
             <p> Feels like ${Math.round(data.main.feels_like)}&deg;F</p>

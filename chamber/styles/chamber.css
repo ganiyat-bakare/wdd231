@@ -42,7 +42,7 @@ header {
     font-family: var(--heading-font);
     background-color: var(--header);
     color: var(--white);
-    padding: 2rem 2rem 2rem 6rem;
+    padding: 2rem 2rem 2rem 5rem;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -90,7 +90,7 @@ li.current-menu-item a {
 }
 
 nav a {
-    color: var(--black);
+    color: var(--navy);
     display: block;
     font-size: 1.1rem;
     font-weight: 450;
@@ -104,7 +104,7 @@ nav a:hover {
 }
 
 nav a:visited {
-    color: var(--navy);
+    color: var(--black);
 }
 
 #ham {
@@ -125,8 +125,8 @@ main {
 }  
 
 .hero img {  
-    width: 100%;  
-    height: 500px;  
+    width: 100%;
+    height: auto;
 }  
 
 .action-button {  
@@ -508,7 +508,6 @@ dialog button {
 
 .thank-you-container ul {
     list-style-type: none;
-    /* padding-left: 1.5rem; */
 }
 
 .thank-you-container h3 {
@@ -583,6 +582,10 @@ footer {
         transition: grid-template-rows 0.5s ease-out;
     }
 
+    nav a {
+        text-align: left;
+    }
+
     .nav {
         max-width: 760px;
         margin: 0;
@@ -632,8 +635,8 @@ footer {
     } 
 
     .action-button {
-        bottom: 230px;
-        left: 49%;
+        bottom: 100px;
+        left: 30%;
     }
     
     .cards, 
