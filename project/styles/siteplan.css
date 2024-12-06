@@ -1,5 +1,5 @@
 body {  
-    font-family: Arial, sans-serif;  
+    font-family: "Play", sans-serif;  
     line-height: 1.6;    
     background-color: #f9f9f9;  
     margin: 0;  
@@ -17,13 +17,13 @@ h1 {
     color: #ffffff;  
     text-align: center;  
     font-weight: bold;
-    font-family: 'Comic Sans MS', sans-serif;  
+    font-family: "Playpen Sans", cursive;  
 }  
 
 h2 {  
     color: #4A90E2; /* Primary color */  
     padding-top: 20px; 
-    font-family: 'Comic Sans MS', sans-serif; 
+    font-family: "Playpen Sans", cursive; 
 }  
 
 .highlight p, li {  
