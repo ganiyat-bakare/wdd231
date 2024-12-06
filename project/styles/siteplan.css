@@ -9,7 +9,7 @@ body {
 }  
 
 header {  
-    background-color: #F5A623; /* Primary color */  
+    background-color: #F5A623;  
     padding: 20px;  
 }  
 
@@ -21,7 +21,7 @@ h1 {
 }  
 
 h2 {  
-    color: #4A90E2; /* Primary color */  
+    color: #4A90E2; 
     padding-top: 20px; 
     font-family: "Playpen Sans", cursive; 
 }  
@@ -91,7 +91,7 @@ ul {
 }  
 
 footer {  
-    background-color: #333333; /* Accent1 color */  
+    background-color: #333333;  
     color: #ffffff;  
     padding: 15px;  
     text-align: center;  
@@ -100,18 +100,18 @@ footer {
 /* Additional styles for responsive design */  
 @media (max-width: 768px) {  
     body {  
-        padding: 10px; /* Reduce padding on smaller screens */  
+        padding: 10px;  
     }  
 
     header, footer {  
-        padding: 10px; /* Reduce padding for header and footer */  
+        padding: 10px;   
     }  
 
     h1 {  
-        font-size: 1.5em; /* Adjust font size for smaller screens */  
+        font-size: 1.5em;  
     }  
 
     h2 {  
-        font-size: 1.2em; /* Adjust subheading size */  
+        font-size: 1.2em; 
     }  
 }
