@@ -19,8 +19,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">  
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Tinos:wght@400;700&display=swap" rel="stylesheet">  
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">  
+    
     <link rel="stylesheet" href="styles/chamber.css">
+    <link rel="stylesheet" href="styles/chamber-large.css">
+    
     <script src="scripts/chamber.js" defer></script> 
     <script src="scripts/getdates.js" defer></script> 
 
@@ -36,7 +40,7 @@
     </header>  
 
     <nav id="animate">  
-        <ul class="nav">  
+        <ul class="menu">  
             <li class="current-menu-item"><a href="index.html">Home</a></li>  
             <li><a href="discover.html">Discover</a></li>  
             <li><a href="directory.html">Business Directory</a></li>  
@@ -51,7 +55,6 @@
                 <source srcset="images/hero-medium.webp" media="(min-width: 500px)">
                 <img src="images/hero-small.webp" alt="image showing commercial buildings" width="1500" height="750">
             </picture>   
-            <!-- <img src="images/commerce.jpeg" alt="hero-image">   -->
             <a href="join.html" class="action-button">Join Chamber!</a>
         </section>  
 
@@ -93,7 +96,10 @@
 
     <footer>  
         <div class="chamber-contact-info">  
-            <p><b>Abuja Chamber of Commerce</b></p>  
+            <p>
+                <img src="images/logo.png" alt="site logo" width="20" height="20">
+                <b>Abuja Chamber of Commerce</b>
+            </p>  
             <p>100 Business St.</p>  
             <p>Abuja, NG</p>  
             <p>info@abujachamber.org</p>  
