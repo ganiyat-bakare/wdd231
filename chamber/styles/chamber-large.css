@@ -77,6 +77,10 @@
         width: 300px;
     }
 
+    #image-gallery div img:hover {
+        transform: scale(1.02); 
+    }
+
     #members {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 1.5rem;
@@ -107,6 +111,10 @@
     .action-button {
         bottom: 80px;
         left: 75%;
+    }
+
+    #image-gallery div h2 {
+        margin: .5rem 5px;
     }
 
     .current-weather h2, 

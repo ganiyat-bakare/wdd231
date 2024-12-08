@@ -176,12 +176,6 @@ main {
     margin: 2rem auto;  
 } 
 
-/* .cards {  
-    display: flex;  
-    gap: 20px;
-    flex-direction: column; 
-}   */
-
 /* Card styles */  
 .card, .member-card {  
     background-color: var(--white);  
