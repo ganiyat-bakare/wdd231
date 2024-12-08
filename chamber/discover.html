@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Abuja Chamber of commerce directory page">
+    <meta name="description" content="Abuja Chamber of commerce discover page">
     <meta name="author" content="Ganiyat Bose Bakare">
-    <title>Abuja Chamber of Commerce | Directory - Ganiyat Bose Bakare</title>
+    <title>Abuja Chamber of Commerce | Discover</title>
 
     <link rel="icon" href="images/favicon.ico">
 
     <meta property="og:title" content="Abuja Chamber of Commerce">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://raw.githubusercontent.com/ganiyat-bakare/wdd231/refs/heads/main/chamber/images/commerce.webp">
-    <meta property="og:url" content="https://ganiyat-bakare.github.io/wdd231/chamber/directory.html">
+    <meta property="og:url" content="https://ganiyat-bakare.github.io/wdd231/chamber/discover.html">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">  
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
@@ -21,9 +21,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 
     <link rel="stylesheet" href="styles/chamber.css">
-
+    <link rel="stylesheet" href="styles/chamber-large.css">
+    
     <script src="scripts/chamber.js" defer></script>
     <script src="scripts/getdates.js" defer></script> 
+    <script src="scripts/discover.js" type="module" defer></script> 
+
 </head>
 <body>
     <header>  
@@ -37,7 +40,7 @@
 
 
     <nav id="animate">
-        <ul class="nav">
+        <ul class="menu">
             <li><a href="index.html">Home</a></li>
             <li class="current-menu-item"><a href="discover.html">Discover</a></li>
             <li><a href="directory.html">Business Directory</a></li>
@@ -45,19 +48,98 @@
         </ul>
     </nav>
 
-    <main></main>
+    <main>
+            
+        <div class="discover-page">  
+            <aside class="sidebar"> 
+                
+                <div id="visitor-message"></div>
+
+                <div id="demographics">
+                <h2>Demographics & Statistics</h2> 
+                    <ul>
+                        <li><strong>Population:</strong> Approximately 3.6 million (2021 estimate)</li>
+                        <li><strong>Area:</strong> 1,769 square kilometers</li>
+                        <li><strong>Density:</strong> About 2,030 people per square kilometer</li>
+                        <li><strong>Major Ethnic Groups:</strong> Gwari, Hausa, and others</li>
+                        <li><strong>Predominant Religion:</strong> Islam and Christianity</li>
+                        <li><strong>Languages Spoken:</strong> English (official), Gwari, Hausa, and other local languages</li>
+                        <li><strong>Climate:</strong> Tropical savanna climate</li>
+                        <li><strong>Educational Institutions:</strong> University of Abuja, Abubakar Tafawa Balewa University, etc.</li>
+                    </ul>
+                </div>
+        
+                <div id="events">
+                    <h2>Events</h2>
+                    <ul>
+                        <li><strong>Abuja Arts and Culture Festival:</strong> Celebrating local art and culture, scheduled for December 15, 2023.</li>
+                        <li><strong>Nigeria International Trade Fair:</strong> Showcasing local businesses and promoting trade, taking place December 10-20, 2023.</li>
+                        <li><strong>Christmas Carol Concert:</strong> Community event featuring local choirs, happening on December 24, 2023.</li>
+                        <li><strong>New Year Bash:</strong> Celebrating the New Year with fireworks and festivities in the city center, January 1, 2024.</li>
+                    </ul>  
+                </div>  
+        
+                <section class="weather">
+                    <div id="weather-info"></div>
+                </section>  
+        
+                <div id="calendar">
+                    <div class="calendar-controls">
+                        <button id="prev-month">&lt;</button>
+                        <span id="current-month-year"></span>
+                        <button id="next-month">&gt;</button>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Su</th>
+                                <th>Mo</th>
+                                <th>Tu</th>
+                                <th>We</th>
+                                <th>Th</th>
+                                <th>Fr</th>
+                                <th>Sa</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                        </tbody>
+                    </table>
+                </div>  
+        
+                <section class="map">
+                    <div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126093.84170376102!2d7.367464782451664!3d9.024246820508498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e745f4cd62fd9%3A0x53bd17b4a20ea12b!2sAbuja%2C%20Federal%20Capital%20Territory!5e0!3m2!1sen!2sng!4v1733610496948!5m2!1sen!2sng" 
+                        width="230" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div> 
+                </section>
+                 
+            </aside>  
+        
+            <section class="main-content">  
+                <h2>Local Photos</h2>  
+                <div id="image-gallery">  
+                </div>  
+            </section>  
+        </div>  
+
+    </main>    
+
     <footer>  
         <div class="chamber-contact-info">  
-            <p><b>Abuja Chamber of Commerce</b></p>  
+            <p>
+                <img src="images/logo.png" alt="site logo" width="20" height="20">
+                <b>Abuja Chamber of Commerce</b>
+            </p>  
             <p>100 Business St.</p>  
             <p>Abuja, NG</p>  
             <p>info@abujachamber.org</p>  
             <p>(+234) 8137367430</p>  
         </div>  
         <div class="social-media-links">  
-            <a href="#"><img src="images/instagram.webp" alt="Instagram" width="40" height="40"/></a>  
-            <a href="#"><img src="images/facebook.webp" alt="Facebook" width="40" height="40"/></a>  
-            <a href="#"><img src="images/linkedin.webp" alt="LinkedIn" width="40" height="40"/></a>  
+            <a href="#"><img src="images/instagram.webp" alt="Instagram" width="40" height="40"></a>  
+            <a href="#"><img src="images/facebook.webp" alt="Facebook" width="40" height="40"></a>  
+            <a href="#"><img src="images/linkedin.webp" alt="LinkedIn" width="40" height="40"></a>  
         </div>  
         <div class="project-info">  
             <p>WDD231 Class Project</p>  
@@ -66,5 +148,6 @@
             <p>Last Modified: <span id="lastModified"></span></p>  
         </div>  
     </footer> 
+
 </body>
 </html>

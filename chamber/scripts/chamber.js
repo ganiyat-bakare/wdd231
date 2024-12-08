@@ -251,7 +251,7 @@ async function loadWeatherData() {
  
         const weatherInfo = `<h2>Current Weather in ${data.name}</h2>
             <img src="https://openweathermap.org/img/w/${data.weather[0].icon}.png"
-            alt="Weather icon representing ${capitalizeWords(data.weather[0].description)}">
+            alt="Weather icon representing ${capitalizeWords(data.weather[0].description)}" loading="lazy">
             <p>${capitalizeWords(data.weather.map(w => w.description).join(', '))}</p>
             <p><strong>${Math.round(data.main.temp)}&deg;F</strong></p>  
             <p> Feels like ${Math.round(data.main.feels_like)}&deg;F</p>
@@ -389,5 +389,4 @@ async function loadSpotlightMembers() {
         console.error('Error fetching members data:', error);  
         document.getElementById('members-container').innerHTML = '<p>Error loading members data.</p>';  
     }  
-}  
-
+} 
