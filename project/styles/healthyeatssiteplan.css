@@ -1,0 +1,136 @@
+:root {
+    --white: #fff;
+    --green: #4ca500;
+    --black: #000;
+    --yellow: #FFD700;
+    --orange: #FF9800; 
+    --brown: #333;
+    --green2: #4CAF50;
+    --green3: #45a049;
+    
+    --background: #e0e5e9;
+    --border: #ddd;
+    --active-class: rgba(0, 0, 0, 0.2);
+    --image-shadow: 0 2px 16px rgba(0, 0, 0, 0.8);
+    --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    --heading-font: "Tinos", serif;
+    --paragraph-font: "Lato", sans-serif;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    line-height: 1.6;
+    background-color: var(--background);
+    margin: 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    background-color: var(--green2);
+    padding: 20px;
+}
+
+h1 {
+    color: var(--white);
+    text-align: center;
+    font-weight: bold;
+    font-family: "Tinos", serif;
+}
+
+h2 {
+    color: var(--green);
+    padding-top: 20px;
+}
+
+.highlight p, li {
+    color: var(--black);
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.color-box {
+    width: 100px;
+    height: 30px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.color1 {
+    background-color: var(--green2);
+}
+
+.color2 {
+    background-color: var(--orange);
+}
+
+.color3 {
+    background-color: var(--background);
+}
+
+.color4 {
+    background-color: var(--white);
+}
+
+.color5 {
+    background-color: var(--brown);
+}
+
+.color6 {
+    background-color: var(--border);
+}
+
+.color7 {
+    background-color: var(--yellow);
+}
+
+.color8 {
+    background-color: var(--background);
+}
+
+.wireframe {
+    border: 1px dashed var(--brown);
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.wireframe img {
+    max-width: 100%;
+}
+
+.highlight {
+    background-color: var(--background);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: var(--brown);
+    color: var(--white);
+    padding: 15px;
+    text-align: center;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header, footer {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+}
