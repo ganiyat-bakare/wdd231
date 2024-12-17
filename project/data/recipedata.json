@@ -1,0 +1,781 @@
+[  
+    {  
+        "id": "1",  
+        "label": "Vegetable Soup",  
+        "image": "vegetable-soup.webp",  
+        "calories": 150,  
+        "prepTime": "40 minutes",  
+        "servingSize": "1 bowl",  
+        "ingredients": ["carrots", "celery", "potatoes", "vegetable broth"],  
+        "nutrition": [  
+            {  
+                "ingredient": "carrots",  
+                "calories": 41,  
+                "carbohydrates": 10,  
+                "fat": 0.2,  
+                "protein": 1  
+            },  
+            {  
+                "ingredient": "celery",  
+                "calories": 16,  
+                "carbohydrates": 3,  
+                "fat": 0.2,  
+                "protein": 0.7  
+            },  
+            {  
+                "ingredient": "potatoes",  
+                "calories": 130,  
+                "carbohydrates": 30,  
+                "fat": 0.2,  
+                "protein": 3  
+            },  
+            {  
+                "ingredient": "vegetable broth",  
+                "calories": 10,  
+                "carbohydrates": 2,  
+                "fat": 0,  
+                "protein": 1  
+            }  
+        ],  
+        "healthLabels": ["Low Calorie", "Vegan"],  
+        "tags": ["low calorie", "warm", "comfort"],  
+        "description": "A comforting vegetable soup full of nutritious carrots, celery, and potatoes, simmered in a flavorful broth."
+          
+    },  
+    {  
+        "id": "2",  
+        "label": "Quinoa Salad",  
+        "image": "quinoa-salad.webp",  
+        "calories": 222,  
+        "prepTime": "20 minutes",  
+        "servingSize": "1 cup",  
+        "ingredients": ["quinoa", "cucumber", "tomatoes", "olive oil"],  
+        "nutrition": [  
+            {  
+                "ingredient": "quinoa",  
+                "calories": 222,  
+                "carbohydrates": 39,  
+                "fat": 3.6,  
+                "protein": 8  
+            },  
+            {  
+                "ingredient": "cucumber",  
+                "calories": 16,  
+                "carbohydrates": 4,  
+                "fat": 0.1,  
+                "protein": 0.7  
+            },  
+            {  
+                "ingredient": "tomatoes",  
+                "calories": 22,  
+                "carbohydrates": 5,  
+                "fat": 0.2,  
+                "protein": 1.1  
+            },  
+            {  
+                "ingredient": "olive oil",  
+                "calories": 119,  
+                "carbohydrates": 0,  
+                "fat": 14,  
+                "protein": 0  
+            }  
+        ],  
+        "healthLabels": ["Vegan", "Mediterranean"],  
+        "tags": ["healthy", "light", "fresh"],  
+        "description": "A refreshing quinoa salad with crisp cucumbers and juicy tomatoes, drizzled with olive oil."  
+    },  
+    {  
+        "id": "3",  
+        "label": "Chicken Stir Fry",  
+        "image": "chicken-stir-fry.webp",  
+        "calories": 350,  
+        "prepTime": "25 minutes",  
+        "servingSize": "1 plate",  
+        "ingredients": ["chicken breast", "broccoli", "carrots", "soy sauce"],  
+        "nutrition": [  
+            {  
+                "ingredient": "chicken breast",  
+                "calories": 165,  
+                "carbohydrates": 0,  
+                "fat": 3.6,  
+                "protein": 31  
+            },  
+            {  
+                "ingredient": "broccoli",  
+                "calories": 55,  
+                "carbohydrates": 11,  
+                "fat": 0.6,  
+                "protein": 4  
+            },  
+            {  
+                "ingredient": "carrots",  
+                "calories": 41,  
+                "carbohydrates": 10,  
+                "fat": 0.2,  
+                "protein": 1  
+            },  
+            {  
+                "ingredient": "soy sauce",  
+                "calories": 10,  
+                "carbohydrates": 1,  
+                "fat": 0,  
+                "protein": 2  
+            }  
+        ],  
+        "healthLabels": ["High Protein"],  
+        "tags": ["high protein", "warm"],  
+        "description": "A quick and flavorful chicken stir fry with tender broccoli and carrots, tossed in soy sauce."  
+    },  
+    {  
+       "id": "4",  
+        "label": "Brown Rice",  
+        "image": "brown-rice.webp",  
+        "calories": 215,  
+        "prepTime": "30 minutes",  
+        "servingSize": "1 cup",  
+        "ingredients": ["brown rice", "clean water"],  
+        "nutrition": [  
+            {  
+                "ingredient": "brown rice",  
+                "calories": 215,  
+                "carbohydrates": 45,  
+                "fat": 1.6,  
+                "protein": 5  
+            }  
+        ],  
+        "healthLabels": ["Gluten-Free", "Vegan"],  
+        "tags": ["healthy", "staple", "warm"],  
+        "description": "Nutty and wholesome brown rice, a perfect base for any meal rich in fiber and nutrients."   
+    },  
+    {  
+        "id": "5",  
+        "label": "Oatmeal",  
+        "image": "oatmeal.webp",  
+        "calories": 150,  
+        "prepTime": "10 minutes",  
+        "servingSize": "1 cup",  
+        "ingredients": ["oats", "clean water", "honey"],  
+        "nutrition": [  
+            {  
+                "ingredient": "oats",  
+                "calories": 150,  
+                "carbohydrates": 27,  
+                "fat": 3,  
+                "protein": 5  
+            },  
+            {  
+                "ingredient": "honey",  
+                "calories": 64,  
+                "carbohydrates": 17,  
+                "fat": 0,  
+                "protein": 0.1  
+            }  
+        ],  
+        "healthLabels": ["High Fiber", "Low Sodium"],  
+        "tags": ["breakfast", "warm", "healthy"],  
+        "description": "A warm and hearty bowl of oatmeal sweetened with honey, providing a great start to your day with fiber and nutrients."  
+    },  
+    {  
+        "id": "6",  
+        "label": "Fruit Smoothie",  
+        "image": "fruit-smoothie.webp",  
+        "calories": 200,  
+        "prepTime": "5 minutes",  
+        "servingSize": "1 cup",  
+        "ingredients": ["banana", "strawberries", "almond milk"],  
+        "nutrition": [  
+            {  
+                "ingredient": "banana",  
+                "calories": 105,  
+                "carbohydrates": 27,  
+                "fat": 0.3,  
+                "protein": 1.3  
+            },  
+            {  
+                "ingredient": "strawberries",  
+                "calories": 49,  
+                "carbohydrates": 12,  
+                "fat": 0.5,  
+                "protein": 1  
+            },  
+            {  
+                "ingredient": "almond milk",  
+                "calories": 30,  
+                "carbohydrates": 1,  
+                "fat": 2.5,  
+                "protein": 1  
+            }  
+        ],  
+        "healthLabels": ["Vegan", "Low Calorie"],  
+        "tags": ["refreshing", "smoothie", "light"],  
+        "description": "A refreshing fruit smoothie packed with bananas and strawberries, blended with almond milk for a nutritious treat."  
+    },  
+    {  
+        "id": "7",  
+        "label": "Egg Salad",  
+        "image": "egg-salad.webp",  
+        "calories": 250,  
+        "prepTime": "15 minutes",  
+        "servingSize": "1 cup",  
+        "ingredients": ["eggs", "mayonnaise", "lettuce"],  
+        "nutrition": [  
+            {  
+                "ingredient": "eggs",  
+                "calories": 155,  
+                "carbohydrates": 1.1,  
+                "fat": 11,  
+                "protein": 13  
+            },  
+            {  
+                "ingredient": "mayonnaise",  
+                "calories": 94,  
+                "carbohydrates": 0.1,  
+                "fat": 10.5,  
+                "protein": 0.1  
+            },  
+            {  
+                "ingredient": "lettuce",  
+                "calories": 5,  
+                "carbohydrates": 1,  
+                "fat": 0,  
+                "protein": 0.5  
+            }  
+        ],  
+        "healthLabels": ["High Protein"],  
+        "tags": ["high protein", "salad", "low carb"],  
+        "description": "A creamy egg salad made with hard-boiled eggs and mayonnaise, served on a bed of crisp lettuce."  
+    },  
+    {  
+        "id": "8",  
+        "label": "Greek Yogurt Parfait",  
+        "image": "yogurt-parfait.webp",  
+        "calories": 250,  
+        "prepTime": "5 minutes",  
+        "servingSize": "1 cup",  
+        "ingredients": ["Greek yogurt", "granola", "berries"],  
+        "nutrition": [  
+            {  
+                "ingredient": "Greek yogurt",  
+                "calories": 150,  
+                "carbohydrates": 10,  
+                "fat": 8,  
+                "protein": 15  
+            },  
+            {  
+                "ingredient": "granola",  
+                "calories": 100,  
+                "carbohydrates": 20,  
+                "fat": 2,  
+                "protein": 3  
+            },  
+            {  
+                "ingredient": "berries",  
+                "calories": 50,  
+                "carbohydrates": 12,  
+                "fat": 0.3,  
+                "protein": 1  
+            }  
+        ],  
+        "healthLabels": ["High Protein", "Healthy Snack"],  
+        "tags": ["breakfast", "quick", "healthy"],  
+        "description": "A delicious Greek yogurt parfait layered with crunchy granola and fresh berries."  
+    },  
+    {  
+        "id": "9",  
+        "label": "Tofu Stir Fry",  
+        "image": "tofu-stir-fry.webp",  
+        "calories": 250,  
+        "prepTime": "20 minutes",  
+        "servingSize": "1 plate",  
+        "ingredients": ["tofu", "bell peppers", "soy sauce"],  
+        "nutrition": [  
+            {  
+                "ingredient": "tofu",  
+                "calories": 94,  
+                "carbohydrates": 2,  
+                "fat": 5,  
+                "protein": 10  
+            },  
+            {  
+                "ingredient": "bell peppers",  
+                "calories": 25,  
+                "carbohydrates": 6,  
+                "fat": 0.2,  
+                "protein": 1  
+            },  
+            {  
+                "ingredient": "soy sauce",  
+                "calories": 10,  
+                "carbohydrates": 1,  
+                "fat": 0,  
+                "protein": 2  
+            }  
+        ],  
+        "healthLabels": ["Vegan"],  
+        "tags": ["vegan", "high protein", "warm"],  
+        "description": "A savory tofu stir fry with bell peppers, packed with flavor and protein, perfect for a quick meal."  
+    },  
+    {  
+        "id": "10",  
+        "label": "Banana Pancakes",  
+        "image": "banana-pancakes.webp",  
+        "calories": 350,  
+        "prepTime": "15 minutes",  
+        "servingSize": "3 pancakes",  
+        "ingredients": ["banana", "egg", "flour", "fresh milk"],  
+        "nutrition": [  
+            {  
+                "ingredient": "banana",  
+                "calories": 105,  
+                "carbohydrates": 27,  
+                "fat": 0.3,  
+                "protein": 1.3  
+            },  
+            {  
+                "ingredient": "egg",  
+                "calories": 70,  
+                "carbohydrates": 1,  
+                "fat": 5,  
+                "protein": 6  
+            },  
+            {  
+                "ingredient": "flour",  
+                "calories": 100,  
+                "carbohydrates": 21,  
+                "fat": 0.4,  
+                "protein": 3  
+            },  
+            {  
+                "ingredient": "milk",  
+                "calories": 42,  
+                "carbohydrates": 5,  
+                "fat": 1,  
+                "protein": 3  
+            }  
+        ],  
+        "healthLabels": ["Vegetarian", "Low Sodium"],  
+        "tags": ["breakfast", "sweet", "light"],  
+        "description": "Fluffy banana pancakes that are sweet and satisfying - a delightful breakfast treat."  
+    },
+    {  
+        "id": "11",  
+        "label": "Lentil Soup",  
+        "image": "lentil-soup.webp",  
+        "calories": 180,  
+        "prepTime": "60 minutes",  
+        "servingSize": "1 bowl",  
+        "ingredients": ["lentils", "tomato", "carrots", "onions"],  
+        "nutrition": [  
+            {  
+                "ingredient": "lentils",  
+                "calories": 115,  
+                "carbohydrates": 20,  
+                "fat": 0.4,  
+                "protein": 9  
+            },  
+            {  
+                "ingredient": "tomato",  
+                "calories": 22,  
+                "carbohydrates": 5,  
+                "fat": 0.2,  
+                "protein": 1  
+            },  
+            {  
+                "ingredient": "carrots",  
+                "calories": 41,  
+                "carbohydrates": 10,  
+                "fat": 0.2,  
+                "protein": 1  
+            },  
+            {  
+                "ingredient": "onions",  
+                "calories": 44,  
+                "carbohydrates": 10,  
+                "fat": 0.1,  
+                "protein": 1  
+            }  
+        ],  
+        "healthLabels": ["High Fiber", "Vegan"],  
+        "tags": ["healthy", "warm", "comfort"],  
+        "description": "A hearty lentil soup rich in flavor and high in fiber, perfect for a nourishing meal."  
+    },  
+    {  
+        "id": "12",  
+        "label": "Baked Salmon",  
+        "image": "baked-salmon.webp",  
+        "calories": 367,  
+        "prepTime": "30 minutes",  
+        "servingSize": "1 fillet",  
+        "ingredients": ["salmon", "lemon", "garlic", "asparagus"],  
+        "nutrition": [  
+            {  
+                "ingredient": "salmon",  
+                "calories": 206,  
+                "carbohydrates": 0,  
+                "fat": 13,  
+                "protein": 22  
+            },  
+            {  
+                "ingredient": "lemon",  
+                "calories": 17,  
+                "carbohydrates": 5,  
+                "fat": 0.2,  
+                "protein": 0.6  
+            },  
+            {  
+                "ingredient": "garlic",  
+                "calories": 4,  
+                "carbohydrates": 1,  
+                "fat": 0,  
+                "protein": 0.2  
+            },  
+            {  
+                "ingredient": "asparagus",  
+                "calories": 20,  
+                "carbohydrates": 4,  
+                "fat": 0.2,  
+                "protein": 2  
+            }  
+        ],  
+        "healthLabels": ["High Protein", "Gluten-Free"],  
+        "tags": ["main course", "healthy", "quick"],  
+        "description": "Tender baked salmon seasoned with lemon and garlic, served with asparagus."  
+    },  
+    {  
+        "id": "13",  
+        "label": "Stuffed Bell Peppers",  
+        "image": "stuffed-bell-peppers.webp",  
+        "calories": 300,  
+        "prepTime": "50 minutes",  
+        "servingSize": "1 pepper",  
+        "ingredients": ["bell peppers", "ground beef", "rice", "tomato sauce"],  
+        "nutrition": [  
+            {  
+                "ingredient": "bell peppers",  
+                "calories": 25,  
+                "carbohydrates": 6,  
+                "fat": 0.2,  
+                "protein": 1  
+            },  
+            {  
+                "ingredient": "ground beef",  
+                "calories": 250,  
+                "carbohydrates": 0,  
+                "fat": 20,  
+                "protein": 26  
+            },  
+            {  
+                "ingredient": "rice",  
+                "calories": 200,  
+                "carbohydrates": 45,  
+                "fat": 0.6,  
+                "protein": 4  
+            },  
+            {  
+                "ingredient": "tomato sauce",  
+                "calories": 30,  
+                "carbohydrates": 7,  
+                "fat": 0.5,  
+                "protein": 1  
+            }  
+        ],  
+        "healthLabels": ["High Protein"],  
+        "tags": ["high protein", "warm", "comfort"],  
+        "description": "Savory bell peppers stuffed with seasoned ground beef and rice, baked to perfection."  
+    },  
+    {  
+        
+        "id": "14",  
+        "label": "Pasta Primavera",  
+        "image": "pasta-primavera.webp",  
+        "calories": 320,  
+        "prepTime": "30 minutes",  
+        "servingSize": "1 bowl",  
+        "ingredients": ["pasta", "bell peppers", "zucchini", "olive oil"],  
+        "nutrition": [  
+            {  
+                "ingredient": "pasta",  
+                "calories": 200,  
+                "carbohydrates": 42,  
+                "fat": 1,  
+                "protein": 7  
+            },  
+            {  
+                "ingredient": "bell peppers",  
+                "calories": 25,  
+                "carbohydrates": 6,  
+                "fat": 0.2,  
+                "protein": 1  
+            },  
+            {  
+                "ingredient": "zucchini",  
+                "calories": 33,  
+                "carbohydrates": 7,  
+                "fat": 0.3,  
+                "protein": 2  
+            },  
+            {  
+                "ingredient": "olive oil",  
+                "calories": 119,  
+                "carbohydrates": 0,  
+                "fat": 14,  
+                "protein": 0  
+            }  
+        ],  
+        "healthLabels": ["Vegetarian"],  
+        "tags": ["vegetarian", "light", "warm"],  
+        "description": "A vibrant pasta primavera loaded with fresh vegetables like bell peppers and zucchini, tossed in olive oil."
+    },  
+    {  
+        "id": "15",  
+        "label": "Caprese Salad",  
+        "image": "caprese-salad.webp",  
+        "calories": 300,  
+        "prepTime": "10 minutes",  
+        "servingSize": "1 plate",  
+        "ingredients": ["mozzarella", "tomatoes", "basil", "olive oil"],  
+        "nutrition": [  
+            {  
+                "ingredient": "mozzarella",  
+                "calories": 280,  
+                "carbohydrates": 3,  
+                "fat": 17,  
+                "protein": 25  
+            },  
+            {  
+                "ingredient": "tomatoes",  
+                "calories": 22,  
+                "carbohydrates": 5,  
+                "fat": 0.2,  
+                "protein": 1.1  
+            },  
+            {  
+                "ingredient": "basil",  
+                "calories": 1,  
+                "carbohydrates": 0.1,  
+                "fat": 0,  
+                "protein": 0  
+            },  
+            {  
+                "ingredient": "olive oil",  
+                "calories": 119,  
+                "carbohydrates": 0,  
+                "fat": 14,  
+                "protein": 0  
+            }  
+        ],  
+        "healthLabels": ["Vegetarian"],  
+        "tags": ["fresh", "salad", "appetizer"],  
+        "description": "A classic Italian salad with fresh mozzarella, ripe tomatoes, and fragrant basil."  
+    },  
+    {  
+        "id": "16",  
+        "label": "Chickpea Salad",  
+        "image": "chickpea-salad.webp",  
+        "calories": 250,  
+        "prepTime": "15 minutes",  
+        "servingSize": "1 cup",  
+        "ingredients": ["chickpeas", "cucumber", "feta cheese", "olive oil"],  
+        "nutrition": [  
+            {  
+                "ingredient": "chickpeas",  
+                "calories": 120,  
+                "carbohydrates": 20,  
+                "fat": 2,  
+                "protein": 6  
+            },  
+            {  
+                "ingredient": "cucumber",  
+                "calories": 16,  
+                "carbohydrates": 4,  
+                "fat": 0.1,  
+                "protein": 0.7  
+            },  
+            {  
+                "ingredient": "feta cheese",  
+                "calories": 75,  
+                "carbohydrates": 1.1,  
+                "fat": 6,  
+                "protein": 4  
+            },  
+            {  
+                "ingredient": "olive oil",  
+                "calories": 119,  
+                "carbohydrates": 0,  
+                "fat": 14,  
+                "protein": 0  
+            }  
+        ],  
+        "healthLabels": ["Vegetarian"],  
+        "tags": ["light", "fresh", "salad"],  
+        "description": "A refreshing and protein-packed chickpea salad with crunchy cucumbers and creamy feta." 
+    },  
+    {  
+        "id": "17",  
+        "label": "Chocolate Banana Bread",  
+        "image": "chocolate-banana-bread.webp",  
+        "calories": 200,  
+        "prepTime": "60 minutes",  
+        "servingSize": "1 slice",  
+        "ingredients": ["bananas", "flour", "cocoa powder", "sugar"],  
+        "nutrition": [  
+            {  
+                "ingredient": "bananas",  
+                "calories": 105,  
+                "carbohydrates": 27,  
+                "fat": 0.3,  
+                "protein": 1.3  
+            },  
+            {  
+                "ingredient": "flour",  
+                "calories": 100,  
+                "carbohydrates": 21,  
+                "fat": 0.4,  
+                "protein": 3  
+            },  
+            {  
+                "ingredient": "cocoa powder",  
+                "calories": 50,  
+                "carbohydrates": 13,  
+                "fat": 1.5,  
+                "protein": 3  
+            },  
+            {  
+                "ingredient": "sugar",  
+                "calories": 16,  
+                "carbohydrates": 4,  
+                "fat": 0,  
+                "protein": 0  
+            }  
+        ],  
+        "healthLabels": ["Vegetarian"],  
+        "tags": ["dessert", "sweet", "baking"],  
+        "description": "A moist and indulgent chocolate banana bread, perfect for dessert or breakfast."  
+    },  
+    {  
+        "id": "18",  
+        "label": "Spaghetti Aglio e Olio",  
+        "image": "spaghetti-aglio-e-olio.webp",  
+        "calories": 400,  
+        "prepTime": "20 minutes",  
+        "servingSize": "1 plate",  
+        "ingredients": ["spaghetti", "olive oil", "garlic", "red pepper flakes"],  
+        "nutrition": [  
+            {  
+                "ingredient": "spaghetti",  
+                "calories": 200,  
+                "carbohydrates": 42,  
+                "fat": 1,  
+                "protein": 7  
+            },  
+            {  
+                "ingredient": "olive oil",  
+                "calories": 119,  
+                "carbohydrates": 0,  
+                "fat": 14,  
+                "protein": 0  
+            },  
+            {  
+                "ingredient": "garlic",  
+                "calories": 4,  
+                "carbohydrates": 1,  
+                "fat": 0,  
+                "protein": 0.2  
+            },  
+            {  
+                "ingredient": "red pepper flakes",  
+                "calories": 6,  
+                "carbohydrates": 1,  
+                "fat": 0.3,  
+                "protein": 0.3  
+            }  
+        ],  
+        "healthLabels": ["Vegetarian"],  
+        "tags": ["pasta", "quick", "easy"],  
+        "description": "A classic Italian pasta dish with garlic, olive oil, and a kick of red pepper."  
+    },  
+    {  
+        "id": "19",  
+        "label": "Shrimp Tacos",  
+        "image": "shrimp-tacos.webp",  
+        "calories": 300,  
+        "prepTime": "25 minutes",  
+        "servingSize": "2 tacos",  
+        "ingredients": ["shrimp", "tortillas", "cabbage", "avocado"],  
+        "nutrition": [  
+            {  
+                "ingredient": "shrimp",  
+                "calories": 84,  
+                "carbohydrates": 0.2,  
+                "fat": 0.9,  
+                "protein": 18  
+            },  
+            {  
+                "ingredient": "tortillas",  
+                "calories": 104,  
+                "carbohydrates": 22,  
+                "fat": 2.5,  
+                "protein": 3  
+            },  
+            {  
+                "ingredient": "cabbage",  
+                "calories": 22,  
+                "carbohydrates": 5,  
+                "fat": 0.1,  
+                "protein": 1  
+            },  
+            {  
+                "ingredient": "avocado",  
+                "calories": 160,  
+                "carbohydrates": 9,  
+                "fat": 15,  
+                "protein": 2  
+            }  
+        ],  
+        "healthLabels": ["Gluten-Free"],  
+        "tags": ["main course", "Mexican", "quick"],  
+        "description": "Fresh and zesty shrimp tacos topped with crisp cabbage and creamy avocado."  
+    },  
+    {  
+        "id": 20,  
+        "label": "Apple Crisp",  
+        "image": "apple-crisp.webp",  
+        "calories": 250,  
+        "prepTime": "30 minutes",  
+        "servingSize": "1 cup",  
+        "ingredients": ["apples", "oats", "cinnamon", "brown sugar"],  
+        "nutrition": [  
+            {  
+                "ingredient": "apples",  
+                "calories": 95,  
+                "carbohydrates": 25,  
+                "fat": 0.3,  
+                "protein": 0.5  
+            },  
+            {  
+                "ingredient": "oats",  
+                "calories": 150,  
+                "carbohydrates": 27,  
+                "fat": 3,  
+                "protein": 5  
+            },  
+            {  
+                "ingredient": "cinnamon",  
+                "calories": 6,  
+                "carbohydrates": 2,  
+                "fat": 0.1,  
+                "protein": 0.1  
+            },  
+            {  
+                "ingredient": "brown sugar",  
+                "calories": 54,  
+                "carbohydrates": 14,  
+                "fat": 0,  
+                "protein": 0  
+            }  
+        ],  
+        "healthLabels": ["Vegetarian"],  
+        "tags": ["dessert", "baking", "comfort food"],  
+        "description": "A warm and comforting apple crisp made with fresh apples, oats, and a hint of cinnamon, perfect for dessert."  
+    }  
+]
