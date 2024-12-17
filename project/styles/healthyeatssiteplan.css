@@ -29,7 +29,7 @@ body {
 }
 
 header {
-    background-color: var(--green2);
+    background-color: var(--green);
     padding: 20px;
 }
 
@@ -41,7 +41,7 @@ h1 {
 }
 
 h2 {
-    color: var(--green);
+    color: var(--black);
     padding-top: 20px;
 }
 
@@ -104,7 +104,7 @@ ul {
 }
 
 .highlight {
-    background-color: var(--background);
+    background-color: var(--white);
     padding: 10px;
     border-radius: 5px;
 }
