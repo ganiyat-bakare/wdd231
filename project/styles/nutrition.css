@@ -1,0 +1,723 @@
+:root {
+    --white: #fff;
+    --green: #4ca500;
+    --black: #000;
+    --yellow: #FFD700;
+    --orange: #FF9800; 
+    --brown: #333;
+    --green2: #4CAF50;
+    --green3: #45a049;
+
+    --background: #e0e5e9;
+    --border: #ddd;
+    --active-class: rgba(0, 0, 0, 0.2);
+    --image-shadow: 0 2px 16px rgba(0, 0, 0, 0.8);
+    --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    --heading-font: "Tinos", serif;
+    --paragraph-font:  "Lato", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background);
+    height: auto;
+    max-width: 1200px;
+    margin: auto;
+}
+
+header {
+    font-family: var(--heading-font);
+    background-color: var(--green);
+    color: var(--white); 
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 44px auto 44px;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.head {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.head h1 {
+    margin: 0;
+}
+    
+h1 {
+    font-size: 2.5rem;
+}
+
+.head p {
+    font-size: smaller;
+    margin: 0;
+}
+
+nav {
+    background-color: var(--yellow);
+}
+
+/* Hamburger Icon */
+#ham::before {
+    content: "\2630";
+}
+
+ /* Hamburger Menu */
+ #ham {
+    font-size: 2.5rem;
+    font-weight: 400;
+    cursor: pointer;
+    background-color: var(--green);
+    padding: .25rem 2vw;
+    border: none;
+    color: var(--white);
+    width: 100%;
+    text-align: right;
+}
+
+#ham:hover {
+    color: var(--yellow);
+}
+
+ul.menu li a {
+    display: block;
+    padding: .75rem 2vw;
+    color: var(--black);
+    text-decoration: none;
+}
+
+li.current-menu-item a {
+    font-weight: bold;
+}
+
+ul.menu {
+    list-style-type: none;
+}
+
+ul.menu a:hover {
+    text-decoration: underline;
+}
+
+ul.menu a:visited {
+    color: var(--black);
+}
+
+#ham.open::before {
+    content: "X";
+}
+
+nav {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s ease-out;
+}
+
+nav ul{
+    overflow: hidden;
+}
+
+nav.open {
+    grid-template-rows: 1fr;
+}
+
+main {
+    display: flex;  
+    flex-direction: column;  
+    gap: 20px;
+    background-color: var(--background);
+    font-family: var(--paragraph-font);
+}
+
+h2{
+    color: var(--black);
+    padding: 1rem;
+}
+
+.hero {  
+    position: relative;  
+    text-align: center;  
+}  
+
+.hero img {  
+    width: 100%;
+    height: auto;
+}  
+
+.action-button {  
+    position: absolute;  
+    background-color: var(--green);  
+    color: var(--black);  
+    padding: 10px 30px; 
+    text-decoration: none;  
+    border: 4px var(--background);
+    bottom: 100px;
+    left: 30%;
+    margin-top: 15px; 
+    border-radius: 5px;
+} 
+
+.action-button:hover {
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+.cta-button {  
+    background-color: var(--orange);  
+    padding: 10px 20px;  
+    text-decoration: none;  
+    color: var(--black);  
+    border-radius: 5px;
+    margin-top: 15px; 
+}
+
+#community p {
+    margin-bottom: 1.2rem;
+}
+
+#community section {
+    margin-bottom: 2rem;
+}
+
+.cta-button:hover {  
+    background: var(--yellow); 
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: var(--green2);
+    color: var(--black);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--green2);
+    color: var(--white);
+}
+
+.search h1 {
+    text-align: center;
+}
+
+/* Card styles */
+.recipe-card {  
+    background-color: var(--white);   
+    border: 1px solid var(--border);
+    border-radius: 8px;   
+    padding: 1.5rem;  
+    text-align: center;
+    width: 100%;
+    margin: 1rem auto;
+    box-shadow: var(--card-shadow);
+}
+
+.nutrition-container #recipe-list {
+    box-shadow: none;
+    border: none;
+}
+
+.recipe-card img {  
+    border-radius: 8px; 
+    height: auto;
+}
+
+.recipe-grid {  
+    display: grid;  
+    gap: 5px;  
+} 
+
+.grid-area {
+    margin: 0 auto;
+    display: grid;
+    gap: 0.75rem;
+    grid-template-areas: 
+    "aside"
+    "section"
+    "feature";
+}
+
+.sidebar {
+    grid-area: aside;
+    border: 2px solid var(--black);
+    background-color: var(--yellow);
+}
+
+.main-content {
+    grid-area: section;
+}
+
+.main-content h2 {
+    text-align: center;
+}
+
+#suggested-recipes div, #featured-recipes div {
+    margin: 1rem 8px;
+    border: 1px solid #999;
+    background-color: #eee;
+    border-radius: 8px;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-areas: 
+    "name"
+    "photograph"
+    "description";
+}
+
+#suggested-recipes div h2, #featured-recipes div h2 {
+    margin: 1rem 10px;
+    grid-area: name;
+    text-align: center;
+}
+
+#suggested-recipes div img, #featured-recipes div img {
+    width: 100%;
+    grid-area: photograph;
+}
+
+#suggested-recipes div p, #featured-recipes div p {
+    margin: 1rem 10px;
+    grid-area: description;
+}
+
+table {
+    margin: 1rem auto;
+}
+
+.calendar-controls {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #000;
+    padding: .8rem;
+    align-items: flex-end;
+}
+
+#calendar button {
+    background-color: var(--green);
+    color: var(--black);
+    border: none;
+    padding: 5px 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#calendar button:hover {
+    background-color: var(--yellow);
+}
+
+#current-month-year {
+    margin: 0 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+#calendar th, #calendar td {
+    padding: 5px;
+    text-align: center;
+    width: 14.28%; 
+}
+
+.today {
+    background-color: var(--orange); 
+    font-weight: bold;
+    border-radius: 50%;
+}
+
+.card,
+#calendar {
+    margin: .5rem;
+    border: 1px solid var(--black);
+    background-color: var(--white);
+    border-radius: 10px;
+}
+
+.sidebar h2 {
+    text-align: center;
+    background-color: var(--green);
+    padding: .8rem;
+    color: var(--white);
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    text-align: center;
+}
+
+.weather-card {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding-left: 20px;
+}
+
+#calendar h2 {
+    background-color: var(--backg);
+    color: var(--navy);
+}
+
+#visitor-message {
+	color: var(--green);
+    background-color: var(--white);
+	font-weight: bolder;
+	font-size: larger;
+    padding: 1rem;
+    text-align: center;
+    font-style: italic;
+} 
+
+.nutrition-tips, #community {  
+    border-radius: 8px;
+    text-align: center; 
+}
+
+#community {
+    margin-bottom: 2rem;
+}
+
+.view {
+    margin: 0 auto;
+    border: var(--card-shadow);
+    padding: .2rem;
+    text-align: center;
+}
+
+.view button {
+    padding: .2rem;
+    cursor: pointer;
+    background-color: var(--orange);
+}
+
+.grid {
+    display: grid;
+    gap: 5px;
+    align-items: center;
+}
+
+.grid section {
+    text-align: center;
+}
+
+.grid img, #recipe-list {
+    border: 1px solid var(--white);
+    box-shadow: var(--image-shadow);
+    justify-content: center;
+    width: 100%;
+}
+
+.recipe-img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.grid section > * {
+    margin: 0.1rem;
+}
+
+.grid h3 {
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    color: var(--black);
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+}
+
+.list section {
+	display: grid;
+    grid-template-rows: 1fr;
+	grid-template-columns: 2fr 1fr 1fr;
+	margin: 0;
+	padding: 0.25rem;
+}
+
+.list > * {
+	margin: 0 1rem;
+}
+
+.list img {
+	display: none;
+}
+
+.list h3 {
+	font-size: 1rem;
+}
+
+.list section:nth-child(even) {
+	background-color: var(--highlight2);
+}
+
+.form-container h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin: 2rem;
+}
+
+.membership-form {  
+    margin-bottom: 20px;  
+    border-bottom: 1px solid var(--border);  
+    padding-bottom: 20px;  
+}  
+ 
+label {
+    display: block;
+    font-size: 1.2rem;
+    color: var(--navy);
+    padding-top: .2rem;
+}
+
+input[type=text],
+input[type=tel],
+input[type=email],
+input[type=number],
+select,
+textarea {
+    display: block;
+    margin: .1rem 0 1rem 0 ;
+    padding: .8rem;
+    border: 1px solid #999;
+    border-radius: .4rem;
+    border-left-width: 5px;
+    border-left-color:#555;
+    font-size: 1rem;
+    color: var(--black);
+    width: 100%;
+}
+
+input:required {
+    border-left-color: #d70000;
+}
+
+input:focus {
+    border-left-color: black; 
+    outline:none;
+}
+
+input:required:valid {
+    border-left-color: green;
+}
+
+input[type=submit] {
+    border: none;
+    text-align: center;
+    background-color: var(--green);  
+    color: var(--black);  
+    border-radius: .4rem;
+    padding: .85rem 1.5rem;
+    width: 100%;
+    margin: 2rem 0;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {  
+    color: var(--white);
+}
+
+@keyframes fadeInScale {  
+    0% {  
+        opacity: 0; 
+        transform: scale(0.8);  
+    }  
+    100% {  
+        opacity: 1; 
+        transform: scale(1);
+    }  
+}  
+
+.benefit-card {
+    animation: fadeInScale 0.5s ease forwards;  
+    display: block; 
+    text-align: center;
+    border: none; 
+    background-color: var(--green);
+    color: var(--white);
+    width: 100%; 
+    margin: 10px 0; 
+    border-radius: 1rem; 
+    padding: 1.5rem; 
+    opacity: 0;  
+}
+
+.benefit-cards h1 {
+    text-align: left;
+}
+
+.benefit-card p {
+    padding-bottom: 1rem;
+}
+
+.benefit-card a {
+    background-color: var(--orange);
+    color: var(--black);
+    padding: .3rem .8rem;
+    text-decoration: none;
+    border-radius: .5rem;
+}
+
+.benefit-card a:hover {
+    background-color: var(--yellow);
+}
+
+dialog {
+    border: 1px solid rgb(0 0 0 / 0.1);
+    border-radius: .25rem;
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: 0 0 3rem #777;
+    width: 90%;
+    max-width: 600px;
+}
+
+dialog h2 {
+    color: var(--green);
+}
+
+::backdrop {
+    background-color: rgb(0 0 0 / 0.5);
+}
+
+dialog button {
+    position: absolute;
+    top: 23px;
+    right: 23px;
+    padding: .5rem 1rem;
+    border: 1px solid rgb(0 0 0 / 0.1);
+}
+
+dialog button:hover {
+    background-color: var(--yellow);
+}
+
+.thank-you-container {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    align-items: left;
+    justify-content: center; 
+}
+
+.thank-you-container ul {
+    list-style-type: none;
+}
+
+.thank-you-container h3 {
+    padding-top: 1rem;
+    color: var(--green);
+}
+
+.thank-you-container li {
+    padding: .6rem;
+}
+
+/* Base styles for recipe display section */
+#recipe-display {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.recipe-container {
+    display: block; 
+    justify-self: center;
+    padding: 2rem;
+}
+
+.recipe-container, .recipe-card h2 {
+    align-self: center;
+    color: var(--black);
+}
+
+.recipe-container h2 {
+    text-align: center;
+}
+
+.nutrition-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-sections {
+    display: flex; 
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+    margin-bottom: 20px; 
+}
+
+.search-container, .ingredient-analysis {
+    flex: 1; 
+    min-width: 250px;
+    margin-right: 20px;
+}
+
+.ingredient-analysis {
+    margin-right: 0;
+}
+
+#recipe-display .recipe-card h3 {
+    font-size: 1.2em;
+    margin: 0 0 10px; 
+    text-align: left;
+}
+
+footer {  
+    display: flex;
+    flex-direction: column;
+    text-align: center;  
+    padding: 10px 0;  
+    background: #333;  
+    color: white;  
+}
+
+.healthy-eats-contact-info,
+.social-media-links,
+.project-info {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.social-media-links a {
+    margin: 0 10px;
+}
+
+.project-info {
+    font-size: 0.9em;
+}
+
+.project-info a {
+    color: var(--orange);
+    font-style: italic;
+}
+
+
+
+
+
+
+

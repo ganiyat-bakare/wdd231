@@ -1,0 +1,166 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Healthy Eats home page">
+    <meta name="author" content="Ganiyat Bose Bakare"> 
+    <title>Healthy Eats - Home</title> 
+    
+
+    <link rel="icon" href="images/favicon.ico">
+
+    <meta property="og:title" content="Healthy Eats">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://raw.githubusercontent.com/ganiyat-bakare/wdd231/refs/heads/main/project/images/nutrition.webp">
+    <meta property="og:url" content="https://ganiyat-bakare.github.io/wdd231/project/index.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Tinos:wght@400;700&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="styles/nutrition.css">  
+    <link rel="stylesheet" href="styles/nutrition-large.css">  
+
+    <script src="scripts/nutrition.js" defer></script>
+    <script src="scripts/getdates.js" defer></script> 
+    <script src="scripts/index.js" defer></script> 
+
+
+</head>  
+<body>  
+    <header>  
+        <img src="images/logo.png" alt="Healthy Eats logo" width="50" height="50">  
+        <div class="head">  
+            <h1>Healthy Eats</h1>  
+        </div>  
+        <button id="ham" aria-label="Menu"></button>  
+    </header>  
+
+    <nav id="animate">  
+        <ul class="menu">  
+            <li class="current-menu-item"><a href="index.html">Home</a></li>  
+            <li><a href="recipes.html">Recipes</a></li>  
+            <li><a href="nutrition.html">Nutrition Analysis</a></li>  
+            <li><a href="join.html">Join</a></li>  
+        </ul>  
+    </nav>       
+
+    <main class="main">   
+        <section class="hero">   
+            <picture>  
+                <source srcset="images/hero-large.webp" media="(min-width: 1000px)">  
+                <source srcset="images/hero-medium.webp" media="(min-width: 500px)">  
+                <img src="images/hero-small.webp" alt="veggies, fruit, nuts, beef, and fish on a wooden table" width="1500" height="750">  
+            </picture>   
+            <a href="recipes.html" class="action-button">Explore Recipes</a>  
+        </section>  
+
+        <div class="grid-area">
+            <aside class="sidebar">
+
+                <div id="visitor-message"></div>
+
+                <!-- Current Weather Section -->  
+                <div class="card">
+                    <h3>Abuja Weather</h3>
+                    <div class="weather-card">
+                        <img id="weather-icon" src="images/braves-logo-100x94.webp" alt="x" width="50" height="50"/>
+                        <div class="weather-details">
+                            <p><b><span id="current-temp"></span>&deg;</b> F</p>
+                            <!-- <p><span id="weather-descr"></span></p> -->
+                            <p>High: <span id="temp-max"></span>&deg;</p>
+                            <p>Low: <span id="temp-min"></span>&deg;</p>
+                            <p>Humidity: <span id="humidity"></span>%</p>
+                            <p>Sunrise: <span id="sunrise"></span></p>
+                            <p>Sunset: <span id="sunset"></span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="calendar">
+                    <div class="calendar-controls">
+                        <button id="prev-month">&lt;</button>
+                        <span id="current-month-year"></span>
+                        <button id="next-month">&gt;</button>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Su</th>
+                                <th>Mo</th>
+                                <th>Tu</th>
+                                <th>We</th>
+                                <th>Th</th>
+                                <th>Fr</th>
+                                <th>Sa</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </aside>
+
+            <div class="main-content">
+                <section class="suggested-recipes">  
+                    <h2>Current Weather Recipes</h2>
+                    <div class="recipe-grid" id="suggested-recipes">  
+                    </div>    
+                </section>  
+            
+                <section class="featured-recipes">  
+                    <h2>Featured Recipes</h2>
+                    <div class="recipe-grid" id="featured-recipes">   
+                    </div>   
+                </section>
+            </div>
+        </div>
+        
+          
+    
+        <section class="nutrition-tips">  
+            <h2>Nutrition Tips</h2>  
+            <p>Learn how to eat healthy and stay fit.</p>  
+            <button id="learnMoreBtn" class="cta-button">Learn More</button>
+            <dialog id="nutrition-tips"></dialog>
+        </section>  
+    
+        <section id="community">  
+            <h2>Join Our Healthy Eats Community</h2>  
+            <p>Subscribe for healthy recipes and tips!</p>  
+            <a href="join.html" class="cta-button">Join Now</a>  
+        </section>  
+    
+    </main>  
+
+    <footer>  
+        <div class="healthy-eats-contact-info">  
+            <p>
+                <img src="images/logo.png" alt="site logo" width="20" height="20">
+                <b>Healthy Eats</b>
+            </p>  
+            <p>100 Business St.</p>  
+            <p>Abuja, NG</p>  
+            <p>info@healthyeats.com</p>  
+            <p>(+234) 8137367430</p>  
+        </div>  
+        <div class="social-media-links">  
+            <a href="https://www.instagram.com/">
+                <img src="images/instagram.webp" alt="Instagram" width="40" height="40"></a>  
+            <a href="https://www.facebook.com/Booustagal/">
+                <img src="images/facebook.webp" alt="Facebook" width="40" height="40"></a>  
+            <a href="https://www.linkedin.com/in/ganiyat-bakare-864501152?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BPScWsCr2Qc%2Bx779EAJmUdw%3D%3D">
+                <img src="images/linkedin.webp" alt="LinkedIn" width="40" height="40"></a>  
+        </div>   
+        <div class="project-info"> 
+            <a href="./attribution.html">Attributions</a>
+            <p>WDD231 Class Project</p>  
+            <p>Instructor: Jason Blazzard</p>  
+            <p>&copy; <span id="currentyear"></span> Healthy Eats</p>  
+            <p>Last Modified: <span id="lastModified"></span></p>  
+        </div>  
+    </footer>
+</body>  
+</html>
