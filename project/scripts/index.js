@@ -176,7 +176,8 @@ function displayRecipes(recipes, containerId) {
         recipeDiv.className = 'recipe-card'; // Add the recipe-card class  
         recipeDiv.innerHTML = `   
             <h3>${recipe.label}</h3>  
-            <img src="images/${recipe.image}" alt="${recipe.label}">  
+            <img src="images/${recipe.image}" alt="${recipe.label}">
+            <h4>${recipe.healthLabels}</h4>
             <p>${recipe.description}</p>  
         `;  
         container.appendChild(recipeDiv);  

@@ -76,7 +76,14 @@ function displayCommunityBenefits(benefit) {
     // Close modal when close button is clicked  
     document.getElementById('closeModal').addEventListener('click', () => {  
         communityInfoDialog.close();  
-    });  
+    });
+    
+    // Close modal when clicking outside of it  
+    communityInfoDialog.addEventListener('click', (event) => {  
+        if (event.target === communityInfoDialog) {  
+            communityInfoDialog.close();  
+        }  
+    });
 } 
 
 // Add 'show' class to all membership cards for initial animation  
