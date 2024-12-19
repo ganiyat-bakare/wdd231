@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     // Load recipe data on page load  
     const recipes = await loadRecipeData();  
     populateRecipeSelect(recipes);  
-    populateIngredientSelect(recipes);  
+    populateIngredientSelect(recipes);
 
     searchButton.addEventListener('click', function () {  
         const query = searchInput.value.toLowerCase();  
@@ -41,11 +41,11 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     // Populate the recipe select dropdown  
     function populateRecipeSelect(recipes) {  
-        recipes.forEach(recipe => {  
+        recipes.forEach(recipe => {
             const option = document.createElement('option');  
             option.value = recipe.id; // Using recipe ID  
             option.textContent = recipe.label;  
-            recipeSelect.appendChild(option);  
+            recipeSelect.appendChild(option);
         });  
     }  
 
