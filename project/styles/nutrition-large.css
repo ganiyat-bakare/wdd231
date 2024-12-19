@@ -18,6 +18,7 @@
         justify-content: left;
         padding: 2rem 2rem 2rem 5rem;
         justify-content: center;
+        align-items: baseline;
     }
 
     .head h1 {

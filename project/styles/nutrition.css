@@ -41,7 +41,7 @@ header {
     display: grid;
     grid-template-columns: 44px auto 44px;
     gap: 40px;
-    align-items: flex-end;
+    align-items: first baseline;
 }
 
 .head {
