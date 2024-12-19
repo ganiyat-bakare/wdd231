@@ -131,8 +131,9 @@ document.addEventListener('DOMContentLoaded', async function () {
 
                 const nutritionDisplay = ` 
                         <div class="associated-recipe">  
-                            <h2>Nutritional Information for ${ingredient} (${quantity} units)</h2>  
-                            <p><strong>Calories</strong>: ${totalCalories.toFixed(2)} kcal</p>  
+                            <h2>Nutritional Information for ${ingredient} (${quantity} units)</h2>
+                            <p><strong>Calories per unit</strong>: ${nutrition.calories} kcal</p>  
+                            <p><strong>Total Calories</strong>: ${totalCalories.toFixed(2)} kcal</p>  
                             <p><strong>Carbohydrates</strong>: ${totalCarbohydrates.toFixed(2)} g</p>  
                             <p><strong>Fat</strong>: ${totalFat.toFixed(2)} g</p>  
                             <p><strong>Protein</strong>: ${totalProtein.toFixed(2)} g</p>
@@ -171,71 +172,3 @@ const timestampInput = document.getElementById("timestamp");
 const currentDateTime = new Date();
 // Format the timestamp as an ISO string (e.g., "2024-11-16T15:30:45.123Z")
 timestampInput.value = currentDateTime.toISOString();
-
-
-// nutrition.js - Integration of Recipes and Meal Planning Functionality  
-
-// Recipe data  
-const recipes = [  
-    { label: "Vegan Tacos", ingredients: ["Tortillas", "Black beans", "Avocado", "Tomatoes"], diet: "vegan", preparationTime: "20 minutes", servings: 2 },  
-    { label: "Keto Salad", ingredients: ["Lettuce", "Olive oil", "Cheese", "Chicken"], diet: "keto", preparationTime: "10 minutes", servings: 2 },  
-    { label: "Vegetarian Stir Fry", ingredients: ["Vegetables", "Soy sauce", "Rice"], diet: "vegetarian", preparationTime: "15 minutes", servings: 4 },  
-    { label: "Paleo Chili", ingredients: ["Beef", "Tomatoes", "Beans"], diet: "paleo", preparationTime: "1 hour", servings: 6 },  
-    { label: "Gluten-Free Pasta", ingredients: ["Gluten-free pasta", "Tomato sauce", "Basil"], diet: "gluten-free", preparationTime: "30 minutes", servings: 4 },  
-    { label: "Quinoa Salad", ingredients: ["Quinoa", "Cucumbers", "Feta", "Olive oil"], diet: "vegetarian", preparationTime: "25 minutes", servings: 4 },  
-    { label: "Zucchini Noodles", ingredients: ["Zucchini", "Garlic", "Olive oil", "Parmesan"], diet: "keto", preparationTime: "15 minutes", servings: 2 },  
-    { label: "Stuffed Peppers", ingredients: ["Bell peppers", "Rice", "Ground turkey", "Cheese"], diet: "paleo", preparationTime: "40 minutes", servings: 4 },  
-    { label: "Chickpea Curry", ingredients: ["Chickpeas", "Coconut milk", "Curry powder", "Spinach"], diet: "vegan", preparationTime: "30 minutes", servings: 3 },  
-    { label: "Eggplant Parmesan", ingredients: ["Eggplant", "Marinara sauce", "Mozzarella", "Basil"], diet: "vegetarian", preparationTime: "1 hour", servings: 4 },  
-    { label: "Keto Cauliflower Fried Rice", ingredients: ["Cauliflower", "Peas", "Carrots", "Eggs"], diet: "keto", preparationTime: "20 minutes", servings: 2 },  
-    { label: "Paleo Chicken Stir Fry", ingredients: ["Chicken", "Broccoli", "Bell peppers", "Soy sauce"], diet: "paleo", preparationTime: "25 minutes", servings: 4 },  
-    { label: "Gluten-Free Pancakes", ingredients: ["Gluten-free flour", "Milk", "Eggs", "Maple syrup"], diet: "gluten-free", preparationTime: "15 minutes", servings: 2 },  
-    { label: "Vegan Lentil Soup", ingredients: ["Lentils", "Carrots", "Celery", "Vegetable broth"], diet: "vegan", preparationTime: "40 minutes", servings: 4 },  
-    { label: "Vegetarian Pizza", ingredients: ["Pizza dough", "Tomato sauce", "Mushrooms", "Cheese"], diet: "vegetarian", preparationTime: "35 minutes", servings: 2 },  
-];  
-
-// Run the following code when the DOM is fully loaded  
-document.addEventListener("DOMContentLoaded", () => {  
-    const generateMealPlanButton = document.getElementById("generate-meal-plan-button");  
-    const mealPlanList = document.getElementById("meal-plan-list");  
-    const dietaryPreferenceSelect = document.getElementById("dietary-preference");  
-    const mealDurationSelect = document.getElementById("meal-duration");  
-    const clearMealPlanButton = document.getElementById("clear-meal-plan-button");  
-
-    // Handle meal plan generation  
-    generateMealPlanButton.addEventListener("click", () => {  
-        console.log("Generate Meal Plan button clicked"); // Debugging log  
-        const duration = mealDurationSelect.value;  
-        const dietaryPreference = dietaryPreferenceSelect.value;  
-
-        // Clear previous meal plan  
-        mealPlanList.innerHTML = "";  
-
-        // Determine the number of meals based on duration  
-        let numberOfMeals = duration === "daily" ? 3 : 21; // 3 meals for daily, 21 for weekly  
-        const availableRecipes = recipes.filter(recipe =>  
-            dietaryPreference === "no-preference" || recipe.diet === dietaryPreference  
-        );  
-
-        // Check if there are available recipes  
-        if (availableRecipes.length === 0) {  
-            mealPlanList.innerHTML = "<p>No recipes available for the selected dietary preference.</p>";  
-            return;  
-        }  
-
-        // Randomly select meals  
-        for (let i = 0; i < numberOfMeals; i++) {  
-            const randomIndex = Math.floor(Math.random() * availableRecipes.length);  
-            const selectedRecipe = availableRecipes[randomIndex];  
-
-            const li = document.createElement("li");  
-            li.innerHTML = `${selectedRecipe.label}: Ingredients - ${selectedRecipe.ingredients.join(", ")} | Preparation Time: ${selectedRecipe.preparationTime} | Servings: ${selectedRecipe.servings}`;  
-            mealPlanList.appendChild(li);  
-        }  
-    });  
-
-    // Clear meal plan  
-    clearMealPlanButton.addEventListener("click", () => {  
-        mealPlanList.innerHTML = ""; // Clear all items in the meal plan list  
-    });  
-});
