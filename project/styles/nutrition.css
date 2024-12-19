@@ -8,6 +8,7 @@
     --green2: #4CAF50;
     --green3: #45a049;
     --light-green: #bed;
+    --deep-green: #008000;
 
     --background: #e0e5e9;
     --border: #ddd;
@@ -40,7 +41,7 @@ header {
     display: grid;
     grid-template-columns: 44px auto 44px;
     gap: 40px;
-    align-items: flex-start;
+    align-items: flex-end;
 }
 
 .head {
@@ -54,7 +55,7 @@ header {
 }
     
 h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 .head p {
@@ -154,7 +155,7 @@ h2{
 
 .action-button {  
     position: absolute;  
-    background-color: var(--green);  
+    background-color: var(--orange);  
     color: var(--black);  
     padding: 10px 30px; 
     text-decoration: none;  
@@ -166,8 +167,7 @@ h2{
 } 
 
 .action-button:hover {
-    background-color: var(--orange);
-    color: var(--white);
+    background-color: var(--yellow);
 }
 
 .cta-button {  
@@ -225,6 +225,7 @@ button:hover {
     padding: 1.5rem;  
     text-align: center;
     width: 100%;
+    height: auto;
     margin: 1rem auto;
     box-shadow: var(--card-shadow);
 }
@@ -298,7 +299,6 @@ button:hover {
     grid-area: label;
     font-size: .9rem;
     font-style: italic;
-    color: var(--green);
 }
 
 #suggested-recipes div p, #featured-recipes div p {
@@ -353,7 +353,7 @@ table {
 }
 
 #calendar button {
-    background-color: var(--green);
+    background-color: var(--yellow);
     color: var(--black);
     border: none;
     padding: 5px 8px;
@@ -418,7 +418,7 @@ table {
 }
 
 #visitor-message {
-	color: var(--green);
+	color: var(--deep-green);
     background-color: var(--white);
 	font-weight: bolder;
 	font-size: larger;
@@ -824,7 +824,7 @@ footer {
 }
 
 .project-info a {
-    color: var(--orange);
+    color: var(--white);
     font-style: italic;
 }
 

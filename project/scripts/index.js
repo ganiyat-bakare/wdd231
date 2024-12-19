@@ -141,7 +141,7 @@ function displayResults(data) {
 
 
 // Sample weather condition  
-const weatherCondition = "cold";
+const weatherCondition = "hot";
 
 // Function to get suggested recipes based on the weather condition  
 function getSuggestedRecipes(recipes, weather) {  

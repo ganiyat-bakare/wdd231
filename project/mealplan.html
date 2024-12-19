@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Healthy Eats meal plan page">
+    <meta name="author" content="Ganiyat Bose Bakare"> 
+
+    <title>Healthy Eats - Meal Plan</title>
+
+    
+    <link rel="icon" href="images/favicon.ico">
+
+    <meta property="og:title" content="Healthy Eats">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://raw.githubusercontent.com/ganiyat-bakare/wdd231/refs/heads/main/project/images/nutrition.webp">
+    <meta property="og:url" content="https://ganiyat-bakare.github.io/wdd231/project/mealplan.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Tinos:wght@400;700&display=swap" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="styles/nutrition.css">
+    <link rel="stylesheet" href="styles/nutrition-large.css">
+
+    <script src="scripts/nutrition.js"></script>
+    <script src="scripts/getdates.js" defer></script> 
+
+</head>
+<body>
+    <header>  
+        <img src="images/logo.png" alt="Healthy Eats logo" width="50" height="50">
+        <div class="head">
+            <h1>Healthy Eats</h1>
+        </div>  
+        <button id="ham" aria-label="Menu"></button>  
+    </header>  
+
+    <nav id="animate">
+        <ul class="menu">  
+            <li><a href="index.html">Home</a></li>  
+            <li><a href="recipes.html">Recipes</a></li>  
+            <li><a href="nutrition.html">Nutrition Analysis</a></li>
+            <li class="current-menu-item"><a href="mealplan.html">Meal Plan</a></li>  
+            <li><a href="join.html">Join</a></li>
+        </ul>  
+    </nav> 
+    <main>
+        <div class="meal-container">
+            <section id="meal-plan-creator">
+                <h2>Meal Plan Generator</h2>  
+                <label for="meal-duration">Select Duration</label>  
+                <select id="meal-duration">
+                    <option value="" disabled selected>Select...</option>
+                    <option value="daily">Daily</option>  
+                    <option value="weekly">Weekly</option>  
+                </select>  
+    
+                <label for="dietary-preference">Select Dietary Preference</label>  
+                <select id="dietary-preference"> 
+                    <option value="" disabled selected>Select a preference...</option>
+                    <option value="no-preference">No Preference</option>  
+                    <option value="vegan">Vegan</option>  
+                    <option value="vegetarian">Vegetarian</option>  
+                    <option value="keto">Keto</option>  
+                    <option value="paleo">Paleo</option>  
+                    <option value="gluten-free">Gluten-Free</option>  
+                </select>  
+
+                <button id="generate-meal-plan-button">Generate Meal Plan</button>  
+                
+                <h3>Your Meal Plan</h3>  
+                <div id="meal-plan-list"></div>  
+            
+                <button id="clear-meal-plan-button">Clear Meal Plan</button>  
+            </section>
+        </div>
+    </main>
+
+    <footer>  
+        <div class="healthy-eats-contact-info">  
+            <p>
+                <img src="images/logo.png" alt="site logo" width="20" height="20">
+                <b>Healthy Eats</b>
+            </p>  
+            <p>100 Business St.</p>  
+            <p>Abuja, NG</p>  
+            <p>info@healthyeats.com</p>  
+            <p>(+234) 8137367430</p>  
+        </div>  
+        <div class="social-media-links">  
+            <a href="https://www.instagram.com/">
+                <img src="images/instagram.webp" alt="Instagram" width="40" height="40"></a>  
+            <a href="https://www.facebook.com/Booustagal/">
+                <img src="images/facebook.webp" alt="Facebook" width="40" height="40"></a>  
+            <a href="https://www.linkedin.com/in/ganiyat-bakare-864501152?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BPScWsCr2Qc%2Bx779EAJmUdw%3D%3D">
+                <img src="images/linkedin.webp" alt="LinkedIn" width="40" height="40"></a>  
+        </div>   
+        <div class="project-info"> 
+            <a href="./attribution.html">Attributions</a>
+            <p>WDD231 Class Project</p>  
+            <p>Instructor: Jason Blazzard</p>  
+            <p>&copy; <span id="currentyear"></span> Healthy Eats</p>  
+            <p>Last Modified: <span id="lastModified"></span></p>  
+        </div>  
+    </footer>
+    <script type="module" src="scripts/modulerecipes.js"></script> 
+</body>
+</html>

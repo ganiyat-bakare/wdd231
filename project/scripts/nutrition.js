@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', async function () {
             const recipeInfo = ` 
                 <div class="associated-recipe recipe-card">
                     <h2>${recipe.label}</h2>  
-                    <img src="images/${recipe.image}" alt="${recipe.label}"  height="200" width="300" loading="lazy"/>
+                    <img src="images/${recipe.image}" alt="${recipe.label}"  height="200" width="300" loading="lazy">
                     <p><strong>Calories</strong>: ${recipe.calories}</p>  
                     <p><strong>Serving Size</strong>: ${recipe.servingSize || 'N/A'}</p>  
                     <p><strong>Ingredients</strong>: ${recipe.ingredients.join(', ')}</p>  
@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         const availableRecipesHtml = recipes.map(recipe =>   
             `<div class="recipe-card">  
                 <h2>${recipe.label}</h2>  
-                <img src="images/${recipe.image}" alt="${recipe.label}"  height="200" width="300" loading="lazy"/>  
+                <img src="images/${recipe.image}" alt="${recipe.label}"  height="200" width="300" loading="lazy">  
                 <p><strong>Calories</strong>: ${recipe.calories}</p>  
                 <p><strong>Ingredients</strong>: ${recipe.ingredients.join(', ')}</p>  
                 <p><strong>Health Labels</strong>: ${recipe.healthLabels.join(', ')}</p>  
